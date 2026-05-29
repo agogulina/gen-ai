@@ -1,6 +1,3 @@
-"""
-Pydantic-схема для заявок на курсы повышения квалификации (ДПО).
-"""
 
 from datetime import date
 from typing import Literal
@@ -75,11 +72,7 @@ class Application(BaseModel):
     @field_validator("graduation_year")
     @classmethod
     def graduation_consistent_with_age(cls, v: int, info) -> int:
-        """
-        Год окончания вуза должен согласовываться с возрастом:
-        graduation_year + 22 <= current_year - age + current_year
-        Упрощённо: человек не мог окончить вуз раньше, чем ему исполнилось 18 лет.
-        """
+        
         age = info.data.get("age")
         if age is not None:
             birth_year = CURRENT_YEAR - age
