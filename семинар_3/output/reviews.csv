@@ -1,0 +1,116 @@
+review_id,author,rating,date,category,severity,quote
+R001,I'm Khanu,1,2020-11-13,reliability,5,it shuts down and it's show me unfortunately instagram has been stopped
+R002,Abdullah Abu bakar,4,2020-11-20,design,2,"you should at least add dark mode in it ,it would less strain my eyes"
+R003,Abhishek Abu,3,2020-12-09,design,3,No dark theme provide
+R003,Abhishek Abu,3,2020-12-09,other,3,no reel videos option
+R005,Gorav Sharma,4,2020-12-10,reliability,3,During split screen only Instagram Lite and Facebook Lite have issue that it only cover 60% of screen and remaining screen is white.
+R006,Ajay Singh Chauhan,5,2020-12-12,performance,2,there are some minor lags while opening new posts and while switching to different tabs
+R007,Soorya Ravindran,4,2020-12-16,design,2,"the screen resolution is less, doesn't occupies the full screen"
+R007,Soorya Ravindran,4,2020-12-16,design,2,there is no native dark mode
+R008,Vishnu AR,2,2020-12-16,reliability,4,"When I tap on something, it isn't loading and says ""something went wrong"""
+R010,Ayush Víshwakarma,2,2020-12-19,reliability,3,When you refresh the feed it doesn't get refreshed
+R010,Ayush Víshwakarma,2,2020-12-19,design,2,dark mode is still missing
+R011,Anushyy,5,2020-12-20,other,2,some of the features are not there yet
+R011,Anushyy,5,2020-12-20,reliability,3,There are bugs
+R011,Anushyy,5,2020-12-20,performance,2,The loading is little slow
+R012,Ramy Ahmed,1,2020-12-26,performance,5,a 'lite' version runs much slower than the full version
+R012,Ramy Ahmed,1,2020-12-26,performance,4,"every single action require a loading bar before it opens, even switching tabs"
+R012,Ramy Ahmed,1,2020-12-26,other,4,This is an outdated website within an app container
+R013,Fayis Ismail,4,2021-01-03,reliability,3,There are a lot of bugs
+R013,Fayis Ismail,4,2021-01-03,other,2,There is no sticker support
+R013,Fayis Ismail,4,2021-01-03,other,2,It doesn't support voice messages
+R013,Fayis Ismail,4,2021-01-03,other,2,there are no camera filters or any kind of effects
+R013,Fayis Ismail,4,2021-01-03,other,2,We can't even add close friends in the lite version
+R014,Tirtha Adhikary,3,2021-01-07,design,4,the dark mode sucks. Can't see anything it's all black also the fonts are black
+R014,Tirtha Adhikary,3,2021-01-07,reliability,3,"Who ever uses full screen mode including me instead of nav bar the bottom portion where the nav bar stays is blank, where The Home Icon, search icon and the other 3 icons should be. Instead they stay above the nav bar space that we don't use"
+R015,phadhi girl rittika sharma,4,2021-01-07,other,1,its features like dark mode are not yet arrived here
+R016,Barathi Kanya,2,2021-01-17,reliability,4,I'm not able to post sometimes
+R016,Barathi Kanya,2,2021-01-17,performance,3,It is taking a lot of time to load
+R018,Mohit,2,2021-01-20,performance,4,Everything loads so slowly
+R018,Mohit,2,2021-01-20,performance,2,it is taking up more than 40 MB for cache which in no way is 'lite'
+R020,ihtesham Haider,4,2021-01-31,design,2,I really don't like the rendering dots
+R021,Venki 0_0,2,2021-02-01,other,3,no reels section
+R021,Venki 0_0,2,2021-02-01,design,4,"you cannot use it in night mode(if u use in night mode u can't see the logos in bottom and top like home, search, reels, heart, ur profile, dms, story etc..."
+R021,Venki 0_0,2,2021-02-01,other,3,U can't make story
+R022,Suraj Garhwal,2,2021-02-02,reliability,4,"in split screen, only half of the screen is visible and the bottom icons are fully cut down"
+R022,Suraj Garhwal,2,2021-02-02,reliability,3,other stability issues are there
+R023,M Atif,3,2021-02-04,other,3,' write a text ' option is missing in story
+R023,M Atif,3,2021-02-04,other,2,voice message icon is also missing
+R023,M Atif,3,2021-02-04,other,3,reels icon is also missing
+R024,Sai Krishna Murari,2,2021-02-04,reliability,4,New feed is not loading
+R024,Sai Krishna Murari,2,2021-02-04,reliability,3,When we read a message it still shown as unread
+R024,Sai Krishna Murari,2,2021-02-04,other,2,You can't zoom in any photo in lite
+R024,Sai Krishna Murari,2,2021-02-04,other,2,You can't react to stories
+R025,Aman Kesarwani,1,2021-02-12,design,2,introduce dark(night) mode
+R025,Aman Kesarwani,1,2021-02-12,performance,4,not preload igtv or reels videos
+R025,Aman Kesarwani,1,2021-02-12,performance,3,Give data saver mode to loas images in very low quality
+R025,Aman Kesarwani,1,2021-02-12,reliability,4,Fix other issues of app stability.
+R026,Sumit Saren,2,2021-02-13,design,3,older post always stay on top so for newer post you have to scroll down
+R026,Sumit Saren,2,2021-02-13,design,3,you cannot zoom on posts
+R027,Sree Charan,1,2021-02-14,design,3,Photos are cropped
+R027,Sree Charan,1,2021-02-14,reliability,4,"There is a bug while seeing ""more"" in the captions"
+R027,Sree Charan,1,2021-02-14,other,3,No stories
+R027,Sree Charan,1,2021-02-14,reliability,5,Doesn't open exact profile link or video link. Cannot watch a single video.
+R028,Sayan Sameer,3,2021-02-16,design,2,No dark theme
+R028,Sayan Sameer,3,2021-02-16,reliability,4,"Couldn't visit my 2nd account because it just keeps asking for code sent to my phone and when I enter it, it asks for it again and again"
+R028,Sayan Sameer,3,2021-02-16,reliability,3,The stories don't work properly too
+R029,Brijtekken,2,2021-02-23,design,3,include a total black dark mode
+R030,Harsh Jadhav,3,2021-02-24,reliability,3,while watching stories of my friends its not go to next page its just stop at one story of only particular post so we have to Struggle to change the page again and again
+R030,Harsh Jadhav,3,2021-02-24,other,2,Just Add Music option while posting image With Music
+R031,Angie Soli,3,2021-02-25,reliability,4,I opened stories and couldn't get out of it as it showed me 'error' when i tried to close it.
+R031,Angie Soli,3,2021-02-25,performance,3,it takes long time to reload my follow requests idk why.
+R033,Kuziva Mubonderi,1,2021-03-01,other,4,couldn't vote on stories etc.
+R033,Kuziva Mubonderi,1,2021-03-01,other,4,it fell like a browser app that has less functionality
+R034,Queena Marie,4,2021-03-03,performance,2,it's a bit laggy
+R034,Queena Marie,4,2021-03-03,other,3,"the emojis used in the lite version is different from my phone's system emoji, causing me to see squares on some exclusive emojis"
+R035,vahn29_s,2,2021-03-03,other,4,i cannot.vote the poll
+R035,vahn29_s,2,2021-03-03,design,4,all the pivtures were cropped as hell
+R037,my&f,1,2021-03-10,other,3,We need the pass through the posts.
+R038,Karthiga Karthi,3,2021-03-11,other,3,I'm getting repeated post from the time of using this app.
+R039,Marvin Martin,4,2021-03-14,other,2,Please add stickers for free.
+R039,Marvin Martin,4,2021-03-14,other,2,"Extend Instagram photos into 20 photos, NOT 10 photos."
+R039,Marvin Martin,4,2021-03-14,other,2,"Please add video extension to 3 minutes only, NOT 1 minute video."
+R039,Marvin Martin,4,2021-03-14,performance,3,Less data for Instagram stories.
+R040,keaya lisa,4,2021-03-16,design,2,Butt the Emoji is the problem . It's different then my keyboard's emoji .
+R040,keaya lisa,4,2021-03-16,reliability,4,"I can't see one of my friends messages , it's keep saying SOMETHING WRONG PLS TRY AGAIN LATER"
+R042,Duchess Freya,3,2021-03-21,other,3,Noticed that we can't create collections.
+R042,Duchess Freya,3,2021-03-21,design,2,There are basic emojis in the comments section.
+R042,Duchess Freya,3,2021-03-21,performance,3,it lags
+R042,Duchess Freya,3,2021-03-21,reliability,4,crashes more than the original Instagram
+R043,Walter Mataz,2,2021-03-21,performance,3,This app is so slow when loading notifications
+R043,Walter Mataz,2,2021-03-21,other,2,it doesn't have access to many things that us as the users want to use
+R044,Cem Özırmak,3,2021-03-23,reliability,4,"I cannot access some of my group chats on DM and I don't know what the problem is. It says ""Something went wrong. Please try again later."""
+R044,Cem Özırmak,3,2021-03-23,other,3,I cannot vote for polls in stories or give an answer to the public questions
+R045,Queenie Meñoza,2,2021-03-24,reliability,4,"whenever I try to add some story or post a picture, it just kept on bugging"
+R046,RAHUL BORANA,1,2021-03-24,reliability,4,"Every time I try to follow I get a message that says, Try Again Later We limit how often you can do certain things on Instagram, like following people, to protect our community."
+R046,RAHUL BORANA,1,2021-03-24,support,3,I also try to report this problem using an option of reporting this just belo the message but I doesn't work.
+R047,Musa salisu Makeri,1,2021-03-28,design,2,you did not fix theme for light/dark mode
+R047,Musa salisu Makeri,1,2021-03-28,other,2,"you should have to work on the IG connection, I mean put data control so that it may help to reduce consuming a lot of Instagram users"
+R047,Musa salisu Makeri,1,2021-03-28,performance,3,you should have to fix speed replying during chatting
+R047,Musa salisu Makeri,1,2021-03-28,other,1,make a standard stickers so that it will be exciting as well
+R048,Tae Texting fever,4,2021-03-29,reliability,3,"Instagram doesn't allow me to post pictures I've taken a long time ago, it only allows me to post pictures I've taken recently"
+R049,Prasanth Ganesan,4,2021-03-31,other,3,Unable to view more than 25 stories. Please add see more button if possible.
+R049,Prasanth Ganesan,4,2021-03-31,reliability,3,Deep linking is not working sometimes
+R049,Prasanth Ganesan,4,2021-03-31,other,2,Dark mode
+R050,Lofi Walker,5,2021-04-03,other,3,It Did Not Have 'Theme' As Well As 'Video Chat' Option.
+R051,Harikrishnan,3,2021-04-05,reliability,4,stories are getting replayed many times without me doing anything
+R051,Harikrishnan,3,2021-04-05,reliability,4,if you dont like a post it comes to your feed everytime over and over again until you like the post
+R052,AlameZone Tech,1,2021-04-06,other,5,my login details Password and Username was been successfully logged in without asking for That Two factor authentication Codes
+R053,Piyush AryaPrakash,1,2021-04-06,performance,4,The feeds never get refreshed . You just have to scroll down and when you click refresh still you see the same feeds.
+R053,Piyush AryaPrakash,1,2021-04-06,other,3,Doesn't support links
+R053,Piyush AryaPrakash,1,2021-04-06,performance,4,Lags too much
+R053,Piyush AryaPrakash,1,2021-04-06,performance,3,Too much annoying while using the messenger
+R053,Piyush AryaPrakash,1,2021-04-06,performance,4,Despite having a good internet connection it keeps laging saying something went wrong
+R053,Piyush AryaPrakash,1,2021-04-06,performance,4,It's too slow
+R055,Eymaan Mustafa,1,2021-04-17,performance,4,Not smooth at all considering how little data is required to run it.
+R055,Eymaan Mustafa,1,2021-04-17,reliability,3,Notifications' tab has to be refreshed either while using the app or when its closed.
+R055,Eymaan Mustafa,1,2021-04-17,reliability,4,I opened a chat and the messages weren't showing up...even when they did they weren't completely loading
+R056,nikhil nikhil,5,2021-04-17,other,2,we can't upload videos
+R056,nikhil nikhil,5,2021-04-17,other,2,"we can't answer any stickers, questions, polls, etc"
+R056,nikhil nikhil,5,2021-04-17,design,2,if we didn't like a post that post remain in the feed until we like it
+R056,nikhil nikhil,5,2021-04-17,other,2,we can't see any live
+R057,ɳiƙ,4,2021-04-18,other,2,please don't autoplay the video feed on timeline.
+R058,TANMOY SEN,1,2021-04-20,other,4,"Instagram Lite App Play Store will add three new options to the new update 1. ""Data Saver"", 2. ""Multiple Photos"", 3. ""Video Call and Voice Record ""."
+R059,Liaqatali Nazari,3,2021-04-22,other,4,One of the most annoying issue that I have faced since using Instagram is it's video autoplay.
+R060,aenean,3,2021-04-24,performance,2,A smoother UI
+R060,aenean,3,2021-04-24,design,2,dark mode

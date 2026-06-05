@@ -1,0 +1,61 @@
+{
+  "n_input": 60,
+  "ie": {
+    "expected": 60,
+    "valid": 60,
+    "failed_validation": 0,
+    "failed_ids": [],
+    "dropped_by_model": []
+  },
+  "n_issues": 115,
+  "n_aspect_marks": 115,
+  "ghosts_total": 2,
+  "quotes_total": 230,
+  "ghost_pct": 0.87,
+  "fidelity": 0.9913,
+  "overall_score": 1.0,
+  "reduce_reran_strict": false,
+  "elapsed_sec": 4524.6,
+  "usage": {
+    "calls": 41,
+    "prompt_tokens": 62111,
+    "completion_tokens": 78110,
+    "cache_hit_tokens": 23424,
+    "cost_usd": 0.0306
+  },
+  "aspect_discovery": {
+    "fixed_literal": [
+      "ads",
+      "design",
+      "performance",
+      "price",
+      "reliability",
+      "support"
+    ],
+    "discovered": [
+      "app_crashes_and_bugs",
+      "display_ui_bugs",
+      "missing_features",
+      "performance_issues",
+      "positive_feedback"
+    ],
+    "discovered_not_in_literal": [
+      "app_crashes_and_bugs",
+      "display_ui_bugs",
+      "missing_features",
+      "performance_issues",
+      "positive_feedback"
+    ],
+    "literal_not_really_discussed": [
+      "ads",
+      "design",
+      "performance",
+      "price",
+      "reliability",
+      "support"
+    ]
+  },
+  "verdict_counts": {
+    "supported": 8
+  }
+}

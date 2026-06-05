@@ -1,0 +1,1112 @@
+[
+  {
+    "review_id": "R001",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "unfortunately instagram has been stopped",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R002",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Instagram lite is good and have every features that it should have",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "you should at least add dark mode in it",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R003",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "instagram and instagram lite both are very best app",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "No dark theme provide, no reel videos option",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R004",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Thank you so much for launching Instagram lite version. Its working faster on devices less than 2GB RAM.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R005",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "App is awesome",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "During split screen only Instagram Lite and Facebook Lite have issue that it only cover 60% of screen and remaining screen is white",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R006",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "This lite version is awesome !! And there is no specific tab for that annoying Reels and that's a bonus!!!!!",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "But there are some minor lags while opening new posts and while switching to different tabs",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R007",
+    "aspects": [
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "screen resolution is less, doesn't occupies the full screen",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "there is no native dark mode",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "App is good",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R008",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "It's not working!!!! When I tap on something, it isn't loading and says 'something went wrong'",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "it isn't loading",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R009",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Instagram Lite makes it easier to bring you closer to the people and things you love. The Instagram Lite app is small, fast and works on all networks.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R010",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "When you refresh the feed it doesn't get refreshed.",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "dark mode is still missing",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "the app is awsome and the plus point is there is no specific reels button that annoy you",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R011",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I like the lite version of Instagram. It feels very simple.",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "some of the features are not there yet",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "There are bugs",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "The loading is little slow",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R012",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "How come that a 'lite' version runs much slower than the full version, and on the same exact device? And why does every single action require a loading bar before it opens, even switching tabs?!",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R013",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "There are a lot of bugs",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "There is no sticker support. It doesn't support voice messages and there are no camera filters or any kind of effects. We can't even add close friends in the lite version.",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R014",
+    "aspects": [
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "the dark mode sucks. Can't see anything it's all black also the fonts are black. Also one other bug. Who ever uses full screen mode including me instead of nav bar the bottom portion where the nav bar stays is blank, where The Home Icon, search icon and the other 3 icons should be.",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Apps pretty good",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "review_id": "R015",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "It is a very pretty version.it provides us all the features of instagram in one short short aap",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "features like dark mode are not yet arrived here",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R016",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "I'm not able to post sometimes",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "It is taking a lot of time to load",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R017",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "It felt exactly like facebook to me. And i didn't have much trouble in using it.",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R018",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "Everything loads so slowly, and it is taking up more than 40 MB for cache which in no way is 'lite'.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "This app is just a web version of Instagram. The actual website is better than this.",
+        "confidence": 0.85
+      }
+    ]
+  },
+  {
+    "review_id": "R019",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "If you don't want distraction from reels and unwanted videos, it's best.... I would surely recommend you to download it",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R020",
+    "aspects": [
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "I really don't like the rendering dots.... When you open it... Can you please change it.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R021",
+    "aspects": [
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "if u use in night mode u can't see the logos in bottom and top like home, search, reels, heart, ur profile, dms, story etc...",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "U can't make story",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R022",
+    "aspects": [
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "in split screen, only half of the screen is visible and the bottom icons are fully cut down",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "other stability issues are there",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "review_id": "R023",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "the ' write a text ' option is missing in story and voice message icon is also missing and the reels icon is also missing",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R024",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "New feed is not loading.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "When we read a message it still shown as unread.",
+        "confidence": 0.85
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "You can't zoom in any photo in lite",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R025",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "introduce dark(night) mode",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "Fix other issues of app stability",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R026",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "the best part why I left the original to this lite version is because of no ads",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "you cannot zoom on posts",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "the older post always stay on top so for newer post you have to scroll down which is to irritating",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R027",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "No stories",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "Photos are cropped",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "There is a bug while seeing \"more\" in the captions",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R028",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "No dark theme",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "Couldn't visit my 2nd account because it just keeps asking for code sent to my phone",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "The stories don't work properly too",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R029",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Thanks for this... i didn't expected Facebook will do such thing.",
+        "confidence": 0.7
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "could you please include a total black dark mode",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R030",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Its a nice app",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "while watching stories of my friends its not go to next page its just stop at one story",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Add Music option while posting image With Music",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R031",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "I opened stories and couldn't get out of it as it showed me 'error' when i tried to close it",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "it takes long time to reload my follow requests idk why",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R032",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Really a good app for low end devices. Very light app, no bug at all.",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Give support for reels. 2. Give option for dark mode. 3. Give direct message sort option like general and primary.",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R033",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "couldn't vote on stories etc.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "it felt like a browser app that has less functionality",
+        "confidence": 0.85
+      }
+    ]
+  },
+  {
+    "review_id": "R034",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I can finally see fancy/special/aesthetic fonts using the lite version of Instagram.",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "it's a bit laggy",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "the emojis used in the lite version is different from my phone's system emoji, causing me to see squares on some exclusive emojis.",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "dark mode please",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R035",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "First of all its good to save more storage in the device 2nd its is good for less consume in data",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "i cannot vote the poll",
+        "confidence": 0.95
+      },
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "all the pictures were cropped as hell",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R036",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "This is good if you want to get over from your addiction for instagram .. as it has less features it won't allow you to use this for longer periods. It was helpful for me atleast.",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "review_id": "R037",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "We need the pass through the posts. It's hilarious to open one by one.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I'm glad that there's a lite version of instagram since my phone had issues with the actual app. This lite app works pretty good but with less feature this sucks.",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "review_id": "R038",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Can u suggest more posts in explore section. I'm getting repeated post from the time of using this app.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "When it comes to data usage it works in low network coverage. It's very nice..",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R039",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "This Instagram Lite is absolutely great app.",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Please add stickers for free.",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Extend Instagram photos into 20 photos, NOT 10 photos.",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Please add video extension to 3 minutes only, NOT 1 minute video.",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Less data for Instagram stories.",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R040",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I used this lite version and now I can post in my page and send stories .",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "display_ui_bugs",
+        "sentiment": "negative",
+        "quote": "Butt the Emoji is the problem . It's different then my keyboard's emoji .",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "It's keep saying SOMETHING WRONG PLS TRY AGAIN LATER soo this cause that I can't see their messages .",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R041",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "It's such an wonderful app!It's performance is mind-blowing... It also uses less internet and work efficiently!",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R042",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Glad that Lite exists.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Noticed that we can't create collections.",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "it lags and crashes more than the original Instagram.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "Lite has been crashing saying, 'something went wrong. Please try again later.'",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R043",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "This app is so slow when loading notifications",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "it doesn't have access to many things that us as the users want to use",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R044",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "It is good for most things people do on Instagram.",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "It says \"Something went wrong. Please try again later.\"",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "I cannot vote for polls in stories or give an answer to the public questions",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R045",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "whenever I try to add some story or post a picture, it just kept on bugging",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "the features of the IG lite is already satisfying for me",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R046",
+    "aspects": [
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "I am not able to follow any of my friends or people. Every time I try to follow I get a message that says, Try Again Later We limit how often you can do certain things on Instagram, like following people, to protect our community.",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R047",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Nice app, actually you devote very well during making this application lite Instagram",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "you did not fix theme for light/dark mode",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "you should have to fix speed replying during chatting",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "make a standard stickers so that it will be exciting as well",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R048",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I am really happy with this app, everything is perfect... even my one of my favourite BTS members ' Jungkook ' is following me on Instagram which is very amazing",
+        "confidence": 1.0
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "the only problem I have is that Instagram doesn't allow me to post pictures I've taken a long time ago, it only allows me to post pictures I've taken recently",
+        "confidence": 1.0
+      }
+    ]
+  },
+  {
+    "review_id": "R049",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "This app is super cool and easy to use.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Unable to view more than 25 stories. Please add see more button if possible.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Dark mode",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "Deep linking is not working sometimes",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R050",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "This App Is So Good. I Love This App.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "It Did Not Have 'Theme' As Well As 'Video Chat' Option.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R051",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "consumes less data than original app",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "stories are getting replayed many times without me doing anything",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "if you dont like a post it comes to your feed everytime over and over again until you like the post",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R052",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I'm really excited for this Lite Version.",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "my login details Password and Username was been successfully logged in without asking for That Two factor authentication Codes.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R053",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "It's good to see that they are providing a lite version.",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "The feeds never get refreshed",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "Lags too much . It's too slow",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "Too much annoying while using the messenger",
+        "confidence": 0.7
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "it keeps laging saying something went wrong",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "Doesn't support links",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R054",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "Honestly, I just found out that Instagram has the lite version and I'm happy.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R055",
+    "aspects": [
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "Not smooth at all considering how little data is required to run it.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "app_crashes_and_bugs",
+        "sentiment": "negative",
+        "quote": "I opened a chat and the messages weren't showing up...even when they did they weren't completely loading",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R056",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "it works very well",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "we can't upload videos, we can't answer any stickers, questions, polls, etc... and ... we can't see any live",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R057",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I love the smooth interface. Works well on my Nokia with Android 9 Pie.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "please don't autoplay the video feed on timeline",
+        "confidence": 0.8
+      }
+    ]
+  },
+  {
+    "review_id": "R058",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "We request you to give these three options very soon",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R059",
+    "aspects": [
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "One of the most annoying issue that I have faced since using Instagram is it's video autoplay.",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "review_id": "R060",
+    "aspects": [
+      {
+        "aspect": "positive_feedback",
+        "sentiment": "positive",
+        "quote": "I'm happy that Instagram finally has the lite version.",
+        "confidence": 0.9
+      },
+      {
+        "aspect": "performance_issues",
+        "sentiment": "negative",
+        "quote": "A smoother UI",
+        "confidence": 0.8
+      },
+      {
+        "aspect": "missing_features",
+        "sentiment": "negative",
+        "quote": "dark mode",
+        "confidence": 0.9
+      }
+    ]
+  }
+]

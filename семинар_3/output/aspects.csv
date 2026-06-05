@@ -1,0 +1,116 @@
+review_id,aspect,sentiment,confidence,quote
+R001,reliability,negative,0.95,"Instagram has not been working at all since the latest update to Instagram ( today's update ) If I try to open it too, it shuts down and it's show me unfortunately instagram has been stopped"
+R002,design,negative,0.95,"you should at least add dark mode in it ,it would less strain my eyes 👀 as it's too bright too use in Midnights"
+R003,design,negative,0.9,"No dark theme provide, no reel videos option and too many problems"
+R004,performance,positive,0.95,Its working faster on devices less than 2GB RAM.
+R005,performance,positive,0.8,app is awesome for 1Gb and 2Gb ram mobiles
+R005,reliability,negative,0.95,During split screen only Instagram Lite and Facebook Lite have issue that it only cover 60% of screen and remaining screen is white.
+R006,design,positive,0.9,there is no specific tab for that annoying Reels and that's a bonus!!!!!
+R006,performance,negative,0.9,there are some minor lags while opening new posts and while switching to different tabs
+R007,design,negative,1.0,"the screen resolution is less, doesn't occupies the full screen. And also there is no native dark mode."
+R008,reliability,negative,1.0,"When I tap on something, it isn't loading and says 'something went wrong'"
+R009,performance,positive,1.0,"small, fast and works on all networks"
+R010,reliability,negative,1.0,When you refresh the feed it doesn't get refreshed.
+R010,design,negative,1.0,dark mode is still missing.
+R010,design,positive,1.0,there is no specific reels button that annoy you
+R011,design,neutral,0.9,It feels very simple. But it is very basic version of Instagram and some of the features are not there yet.
+R011,performance,neutral,0.9,The loading is little slow but it can run in slow internet connection.
+R011,reliability,negative,1.0,There are bugs
+R012,performance,negative,1.0,"runs much slower than the full version, and every single action require a loading bar before it opens, even switching tabs!"
+R012,design,negative,1.0,This is an outdated website within an app container.
+R013,reliability,negative,0.9,There are a lot of bugs
+R013,design,negative,0.8,the lite version is missing many features
+R014,design,negative,0.95,the dark mode sucks
+R014,reliability,negative,0.85,one other bug
+R015,design,positive,0.8,provides us all the features of instagram in one short short aap
+R015,design,negative,0.9,features like dark mode are not yet arrived
+R016,reliability,negative,0.9,I'm not able to post sometimes.
+R016,performance,negative,0.95,It is taking a lot of time to load
+R017,design,positive,0.85,Both apps are very good
+R017,reliability,positive,0.9,i had no problem with both
+R018,performance,negative,0.95,Everything loads so slowly
+R018,design,negative,0.85,This app is just a web version of Instagram
+R019,design,positive,0.7,"If you don't want distraction from reels and unwanted videos, it's best...."
+R020,design,negative,0.9,I really don't like the rendering dots
+R021,design,negative,0.9,you cannot use it in night mode(if u use in night mode u can't see the logos in bottom and top
+R022,design,negative,0.9,"in split screen, only half of the screen is visible and the bottom icons are fully cut down"
+R022,reliability,negative,0.9,other stability issues are there
+R023,design,negative,0.9,the ' write a text ' option is missing in story and voice message icon is also missing and the reels icon is also missing
+R024,reliability,negative,0.9,New feed is not loading
+R024,reliability,negative,0.9,When we read a message it still shown as unread
+R024,design,negative,0.9,You can't zoom in any photo in lite
+R024,design,negative,0.9,You can't react to stories
+R025,design,negative,0.9,introduce dark(night) mode
+R025,performance,negative,0.85,not preload igtv or reels videos
+R025,reliability,negative,1.0,Fix other issues of app stability
+R026,ads,positive,1.0,no ads in lite
+R026,design,negative,0.9,older post always stay on top so for newer post you have to scroll down which is to irritating
+R027,design,negative,0.9,Photos are cropped
+R027,reliability,negative,0.95,"There is a bug while seeing ""more"" in the captions"
+R028,design,negative,1.0,No dark theme
+R028,reliability,negative,0.95,"Couldn't visit my 2nd account because it just keeps asking for code sent to my phone and when I enter it, it asks for it again and again"
+R029,design,negative,1.0,could you please include a total black dark mode
+R030,reliability,negative,0.9,while watching stories of my friends its not go to next page its just stop at one story
+R030,design,negative,0.9,Just Add Music option while posting image With Music
+R031,reliability,negative,0.9,"just few bugs need to be fixed. I opened stories and couldn't get out of it as it showed me ""error"" when i tried to close it."
+R031,performance,negative,0.8,it takes long time to reload my follow requests idk why.
+R032,performance,positive,0.9,"Really a good app for low end devices. Very light app, no bug at all."
+R032,design,neutral,0.7,Give option for dark mode.
+R033,design,negative,0.95,The app could have just had the same functionality as The original Instagram but it fell like a browser app that has less functionality.
+R034,design,positive,0.9,I can finally see fancy/special/aesthetic fonts using the lite version of Instagram.
+R034,performance,negative,0.7,it's a bit laggy
+R034,design,negative,0.85,"the emojis used in the lite version is different from my phone's system emoji, causing me to see squares on some exclusive emojis."
+R035,performance,positive,0.8,its good to save more storage in the device 2nd its is good for less consume in data.
+R035,design,negative,0.9,i cannot.vote the poll and all the pivtures were cropped as hell its very anooying for me
+R036,design,positive,0.85,This is good if you want to get over from your addiction for instagram .. as it has less features it won't allow you to use this for longer periods.
+R037,performance,positive,0.8,works pretty good
+R037,design,negative,0.9,less feature this sucks
+R038,performance,positive,0.9,works in low network coverage
+R038,design,negative,0.8,I'm getting repeated post from the time of using this app
+R039,design,negative,0.7,Please add stickers for free
+R039,performance,neutral,0.6,Make sure this Instagram Lite is really 70% less data
+R040,reliability,negative,0.9,it's keep saying SOMETHING WRONG PLS TRY AGAIN LATER
+R040,design,negative,0.8,Emoji is the problem. It's different then my keyboard's emoji
+R041,performance,positive,0.95,performance is mind-blowing
+R042,design,negative,0.9,we can't create collections
+R042,performance,negative,0.85,it lags and crashes more than the original Instagram
+R042,reliability,negative,0.9,"Lite has been crashing saying, 'something went wrong. Please try again later.'"
+R043,performance,negative,0.9,This app is so slow when loading notifications
+R043,design,negative,0.8,doesn't have access to many things that us as the users want to use
+R044,reliability,negative,0.95,"It says ""Something went wrong. Please try again later."""
+R044,design,negative,0.85,I cannot vote for polls in stories or give an answer to the public questions
+R045,reliability,negative,0.95,"whenever I try to add some story or post a picture, it just kept on bugging"
+R046,reliability,negative,0.95,"I am not able to follow any of my friends or people.Every time I try to follow I get a message that says, Try Again Later We limit how often you can do certain things on Instagram, like following people, to protect our community."
+R046,support,negative,0.8,I also try to report this problem using an option of reporting this just belo the message but I doesn't work.
+R047,design,negative,0.9,you did not fix theme for light/dark mode
+R047,design,negative,0.7,make a standard stickers
+R047,performance,negative,0.85,"you should have to work on the IG connection, I mean put data control so that it may help to reduce consuming a lot of Instagram users"
+R047,performance,negative,0.9,fix speed replying during chatting
+R048,reliability,negative,0.9,Instagram doesn't allow me to post pictures I've taken a long time ago
+R049,design,positive,0.9,This app is super cool and easy to use.
+R049,design,negative,0.8,Unable to view more than 25 stories.
+R049,reliability,negative,0.9,Deep linking is not working sometimes.
+R049,design,negative,0.7,Dark mode
+R050,design,positive,0.9,This App Is So Good. I Love This App.
+R050,design,negative,0.8,It Did Not Have 'Theme' As Well As 'Video Chat' Option.
+R051,performance,positive,0.8,Its surely consumes less data than original app
+R051,design,negative,0.7,many of you may not get comfortable with this interface
+R051,reliability,negative,0.9,stories are getting replayed many times without me doing anything
+R051,reliability,negative,0.9,if you dont like a post it comes to your feed everytime over and over again until you like the post
+R052,reliability,negative,0.95,my login details Password and Username was been successfully logged in without asking for That Two factor authentication Codes
+R053,performance,negative,0.9,Lags too much
+R053,performance,negative,0.8,It's too slow
+R053,reliability,negative,0.9,The feeds never get refreshed
+R053,reliability,negative,0.8,Doesn't support links
+R053,reliability,negative,0.9,keeps laging saying something went wrong
+R054,performance,positive,0.6,I wanted Instagram to have a lite version for my small capacity cellphone
+R055,performance,negative,0.9,Lags as well.
+R055,reliability,negative,0.9,I opened a chat and the messages weren't showing up...even when they did they weren't completely loading
+R056,performance,positive,0.8,it works very well
+R056,design,negative,0.8,"we can't upload videos, we can't answer any stickers, questions, polls, etc..."
+R057,design,positive,0.9,I love the smooth interface.
+R057,design,negative,0.8,please don't autoplay the video feed on timeline.
+R057,performance,positive,0.8,Works well on my Nokia with Android 9 Pie.
+R058,design,negative,0.7,We request you to give these three options very soon
+R059,design,negative,0.9,One of the most annoying issue that I have faced since using Instagram is it's video autoplay.
+R060,design,negative,0.8,"it still needs many improvements. A smoother UI, and I suppose the dark mode too."

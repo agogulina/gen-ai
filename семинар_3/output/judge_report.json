@@ -1,0 +1,88 @@
+{
+  "verdicts": [
+    {
+      "action": "Fix crashes and error messages to improve stability.",
+      "support": "supported",
+      "evidence": [
+        "R001: «it shuts down and it's show me unfortunately instagram has been stopped»",
+        "R008: «When I tap on something, it isn't loading and says \"something went wrong\"»",
+        "R042: «crashes more than the original Instagram»"
+      ],
+      "comment": "Multiple direct reports of crashes and error messages."
+    },
+    {
+      "action": "Add dark/night mode as most requested feature.",
+      "support": "supported",
+      "evidence": [
+        "R002: «you should at least add dark mode in it ,it would less strain my eyes»",
+        "R003: «No dark theme provide»",
+        "R010: «dark mode is still missing»"
+      ],
+      "comment": "Many users explicitly request dark mode."
+    },
+    {
+      "action": "Reduce lag and improve loading speed, especially for feeds and stories.",
+      "support": "supported",
+      "evidence": [
+        "R012: «every single action require a loading bar before it opens»",
+        "R018: «Everything loads so slowly»",
+        "R053: «Lags too much»"
+      ],
+      "comment": "Numerous performance complaints about lag and slow loading."
+    },
+    {
+      "action": "Implement missing features: stories polls, video upload, voice messages, and reels toggle.",
+      "support": "supported",
+      "evidence": [
+        "R033: «couldn't vote on stories etc.»",
+        "R056: «we can't upload videos»",
+        "R013: «It doesn't support voice messages»",
+        "R003: «no reel videos option»"
+      ],
+      "comment": "Direct mentions of each missing feature."
+    },
+    {
+      "action": "Fix bugs: split screen issues, emoji squares, autoplay settings, and post ordering.",
+      "support": "supported",
+      "evidence": [
+        "R005: «During split screen only Instagram Lite and Facebook Lite have issue that it only cover 60% of screen»",
+        "R034: «the emojis used in the lite version is different from my phone's system emoji, causing me to see squares»",
+        "R057: «please don't autoplay the video feed on timeline.»",
+        "R026: «older post always stay on top so for newer post you have to scroll down»"
+      ],
+      "comment": "Each bug type is reported."
+    },
+    {
+      "action": "Improve navigation and feed refresh mechanism.",
+      "support": "supported",
+      "evidence": [
+        "R010: «When you refresh the feed it doesn't get refreshed»",
+        "R053: «The feeds never get refreshed . You just have to scroll down and when you click refresh still you see the same feeds.»",
+        "R014: «Who ever uses full screen mode... the bottom portion where the nav bar stays is blank»"
+      ],
+      "comment": "Feed refresh and navigation issues reported."
+    },
+    {
+      "action": "Add data saver mode and option to disable video autoplay.",
+      "support": "supported",
+      "evidence": [
+        "R025: «Give data saver mode to loas images in very low quality»",
+        "R058: «Instagram Lite App Play Store will add three new options to the new update 1. \"Data Saver\"...»",
+        "R059: «One of the most annoying issue that I have faced since using Instagram is it's video autoplay.»"
+      ],
+      "comment": "Explicit requests for data saver and disabling autoplay."
+    },
+    {
+      "action": "Ensure compatibility with system emojis and proper display.",
+      "support": "supported",
+      "evidence": [
+        "R034: «the emojis used in the lite version is different from my phone's system emoji, causing me to see squares»",
+        "R040: «Butt the Emoji is the problem . It's different then my keyboard's emoji .»",
+        "R027: «Photos are cropped»"
+      ],
+      "comment": "Emoji incompatibility and display issues reported."
+    }
+  ],
+  "overall_score": 1.0,
+  "summary": "All eight recommendations are directly supported by user complaints, with multiple evidence for each."
+}

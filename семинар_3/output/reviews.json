@@ -1,0 +1,1184 @@
+[
+  {
+    "review_id": "R001",
+    "author": "I'm Khanu",
+    "rating": 1,
+    "date": "2020-11-13",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 5,
+        "quote": "it shuts down and it's show me unfortunately instagram has been stopped"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R002",
+    "author": "Abdullah Abu bakar",
+    "rating": 4,
+    "date": "2020-11-20",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "you should at least add dark mode in it ,it would less strain my eyes"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R003",
+    "author": "Abhishek Abu",
+    "rating": 3,
+    "date": "2020-12-09",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 3,
+        "quote": "No dark theme provide"
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "no reel videos option"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R004",
+    "author": "Go viral",
+    "rating": 5,
+    "date": "2020-12-09",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R005",
+    "author": "Gorav Sharma",
+    "rating": 4,
+    "date": "2020-12-10",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "During split screen only Instagram Lite and Facebook Lite have issue that it only cover 60% of screen and remaining screen is white."
+      }
+    ],
+    "mentioned_apps": [
+      "Facebook Lite"
+    ]
+  },
+  {
+    "review_id": "R006",
+    "author": "Ajay Singh Chauhan",
+    "rating": 5,
+    "date": "2020-12-12",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 2,
+        "quote": "there are some minor lags while opening new posts and while switching to different tabs"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R007",
+    "author": "Soorya Ravindran",
+    "rating": 4,
+    "date": "2020-12-16",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "the screen resolution is less, doesn't occupies the full screen"
+      },
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "there is no native dark mode"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R008",
+    "author": "Vishnu AR",
+    "rating": 2,
+    "date": "2020-12-16",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "When I tap on something, it isn't loading and says \"something went wrong\""
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R009",
+    "author": "꧁༺ɢօʋɨռɖ ʝɦǟ༻꧂",
+    "rating": 5,
+    "date": "2020-12-18",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R010",
+    "author": "Ayush Víshwakarma",
+    "rating": 2,
+    "date": "2020-12-19",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "When you refresh the feed it doesn't get refreshed"
+      },
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "dark mode is still missing"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R011",
+    "author": "Anushyy",
+    "rating": 5,
+    "date": "2020-12-20",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "some of the features are not there yet"
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "There are bugs"
+      },
+      {
+        "category": "performance",
+        "severity": 2,
+        "quote": "The loading is little slow"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R012",
+    "author": "Ramy Ahmed",
+    "rating": 1,
+    "date": "2020-12-26",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 5,
+        "quote": "a 'lite' version runs much slower than the full version"
+      },
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "every single action require a loading bar before it opens, even switching tabs"
+      },
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "This is an outdated website within an app container"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R013",
+    "author": "Fayis Ismail",
+    "rating": 4,
+    "date": "2021-01-03",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "There are a lot of bugs"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "There is no sticker support"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "It doesn't support voice messages"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "there are no camera filters or any kind of effects"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "We can't even add close friends in the lite version"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R014",
+    "author": "Tirtha Adhikary",
+    "rating": 3,
+    "date": "2021-01-07",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 4,
+        "quote": "the dark mode sucks. Can't see anything it's all black also the fonts are black"
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "Who ever uses full screen mode including me instead of nav bar the bottom portion where the nav bar stays is blank, where The Home Icon, search icon and the other 3 icons should be. Instead they stay above the nav bar space that we don't use"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R015",
+    "author": "phadhi girl rittika sharma",
+    "rating": 4,
+    "date": "2021-01-07",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 1,
+        "quote": "its features like dark mode are not yet arrived here"
+      }
+    ],
+    "mentioned_apps": [
+      "Instagram"
+    ]
+  },
+  {
+    "review_id": "R016",
+    "author": "Barathi Kanya",
+    "rating": 2,
+    "date": "2021-01-17",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "I'm not able to post sometimes"
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "It is taking a lot of time to load"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R017",
+    "author": "mahi kumari xii d . 27",
+    "rating": 5,
+    "date": "2021-01-18",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": [
+      "Facebook",
+      "Instagram"
+    ]
+  },
+  {
+    "review_id": "R018",
+    "author": "Mohit",
+    "rating": 2,
+    "date": "2021-01-20",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "Everything loads so slowly"
+      },
+      {
+        "category": "performance",
+        "severity": 2,
+        "quote": "it is taking up more than 40 MB for cache which in no way is 'lite'"
+      }
+    ],
+    "mentioned_apps": [
+      "Instagram"
+    ]
+  },
+  {
+    "review_id": "R019",
+    "author": "aditi wegad",
+    "rating": 5,
+    "date": "2021-01-31",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R020",
+    "author": "ihtesham Haider",
+    "rating": 4,
+    "date": "2021-01-31",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "I really don't like the rendering dots"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R021",
+    "author": "Venki 0_0",
+    "rating": 2,
+    "date": "2021-02-01",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "no reels section"
+      },
+      {
+        "category": "design",
+        "severity": 4,
+        "quote": "you cannot use it in night mode(if u use in night mode u can't see the logos in bottom and top like home, search, reels, heart, ur profile, dms, story etc..."
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "U can't make story"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R022",
+    "author": "Suraj Garhwal",
+    "rating": 2,
+    "date": "2021-02-02",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "in split screen, only half of the screen is visible and the bottom icons are fully cut down"
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "other stability issues are there"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R023",
+    "author": "M Atif",
+    "rating": 3,
+    "date": "2021-02-04",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "' write a text ' option is missing in story"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "voice message icon is also missing"
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "reels icon is also missing"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R024",
+    "author": "Sai Krishna Murari",
+    "rating": 2,
+    "date": "2021-02-04",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "New feed is not loading"
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "When we read a message it still shown as unread"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "You can't zoom in any photo in lite"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "You can't react to stories"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R025",
+    "author": "Aman Kesarwani",
+    "rating": 1,
+    "date": "2021-02-12",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "introduce dark(night) mode"
+      },
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "not preload igtv or reels videos"
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "Give data saver mode to loas images in very low quality"
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "Fix other issues of app stability."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R026",
+    "author": "Sumit Saren",
+    "rating": 2,
+    "date": "2021-02-13",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 3,
+        "quote": "older post always stay on top so for newer post you have to scroll down"
+      },
+      {
+        "category": "design",
+        "severity": 3,
+        "quote": "you cannot zoom on posts"
+      }
+    ],
+    "mentioned_apps": [
+      "Instagram"
+    ]
+  },
+  {
+    "review_id": "R027",
+    "author": "Sree Charan",
+    "rating": 1,
+    "date": "2021-02-14",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 3,
+        "quote": "Photos are cropped"
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "There is a bug while seeing \"more\" in the captions"
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "No stories"
+      },
+      {
+        "category": "reliability",
+        "severity": 5,
+        "quote": "Doesn't open exact profile link or video link. Cannot watch a single video."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R028",
+    "author": "Sayan Sameer",
+    "rating": 3,
+    "date": "2021-02-16",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "No dark theme"
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "Couldn't visit my 2nd account because it just keeps asking for code sent to my phone and when I enter it, it asks for it again and again"
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "The stories don't work properly too"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R029",
+    "author": "Brijtekken",
+    "rating": 2,
+    "date": "2021-02-23",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 3,
+        "quote": "include a total black dark mode"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R030",
+    "author": "Harsh Jadhav",
+    "rating": 3,
+    "date": "2021-02-24",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "while watching stories of my friends its not go to next page its just stop at one story of only particular post so we have to Struggle to change the page again and again"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "Just Add Music option while posting image With Music"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R031",
+    "author": "Angie Soli",
+    "rating": 3,
+    "date": "2021-02-25",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "I opened stories and couldn't get out of it as it showed me 'error' when i tried to close it."
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "it takes long time to reload my follow requests idk why."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R032",
+    "author": "Pritam Paul",
+    "rating": 5,
+    "date": "2021-02-27",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R033",
+    "author": "Kuziva Mubonderi",
+    "rating": 1,
+    "date": "2021-03-01",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "couldn't vote on stories etc."
+      },
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "it fell like a browser app that has less functionality"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R034",
+    "author": "Queena Marie",
+    "rating": 4,
+    "date": "2021-03-03",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 2,
+        "quote": "it's a bit laggy"
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "the emojis used in the lite version is different from my phone's system emoji, causing me to see squares on some exclusive emojis"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R035",
+    "author": "vahn29_s",
+    "rating": 2,
+    "date": "2021-03-03",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "i cannot.vote the poll"
+      },
+      {
+        "category": "design",
+        "severity": 4,
+        "quote": "all the pivtures were cropped as hell"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R036",
+    "author": "Aditya Shekhar",
+    "rating": 5,
+    "date": "2021-03-05",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R037",
+    "author": "my&f",
+    "rating": 1,
+    "date": "2021-03-10",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "We need the pass through the posts."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R038",
+    "author": "Karthiga Karthi",
+    "rating": 3,
+    "date": "2021-03-11",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "I'm getting repeated post from the time of using this app."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R039",
+    "author": "Marvin Martin",
+    "rating": 4,
+    "date": "2021-03-14",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "Please add stickers for free."
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "Extend Instagram photos into 20 photos, NOT 10 photos."
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "Please add video extension to 3 minutes only, NOT 1 minute video."
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "Less data for Instagram stories."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R040",
+    "author": "keaya lisa",
+    "rating": 4,
+    "date": "2021-03-16",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "Butt the Emoji is the problem . It's different then my keyboard's emoji ."
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "I can't see one of my friends messages , it's keep saying SOMETHING WRONG PLS TRY AGAIN LATER"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R041",
+    "author": "kumar Shanu",
+    "rating": 5,
+    "date": "2021-03-17",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R042",
+    "author": "Duchess Freya",
+    "rating": 3,
+    "date": "2021-03-21",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "Noticed that we can't create collections."
+      },
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "There are basic emojis in the comments section."
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "it lags"
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "crashes more than the original Instagram"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R043",
+    "author": "Walter Mataz",
+    "rating": 2,
+    "date": "2021-03-21",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "This app is so slow when loading notifications"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "it doesn't have access to many things that us as the users want to use"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R044",
+    "author": "Cem Özırmak",
+    "rating": 3,
+    "date": "2021-03-23",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "I cannot access some of my group chats on DM and I don't know what the problem is. It says \"Something went wrong. Please try again later.\""
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "I cannot vote for polls in stories or give an answer to the public questions"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R045",
+    "author": "Queenie Meñoza",
+    "rating": 2,
+    "date": "2021-03-24",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "whenever I try to add some story or post a picture, it just kept on bugging"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R046",
+    "author": "RAHUL BORANA",
+    "rating": 1,
+    "date": "2021-03-24",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "Every time I try to follow I get a message that says, Try Again Later We limit how often you can do certain things on Instagram, like following people, to protect our community."
+      },
+      {
+        "category": "support",
+        "severity": 3,
+        "quote": "I also try to report this problem using an option of reporting this just belo the message but I doesn't work."
+      }
+    ],
+    "mentioned_apps": [
+      "InstaWeb"
+    ]
+  },
+  {
+    "review_id": "R047",
+    "author": "Musa salisu Makeri",
+    "rating": 1,
+    "date": "2021-03-28",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "you did not fix theme for light/dark mode"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "you should have to work on the IG connection, I mean put data control so that it may help to reduce consuming a lot of Instagram users"
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "you should have to fix speed replying during chatting"
+      },
+      {
+        "category": "other",
+        "severity": 1,
+        "quote": "make a standard stickers so that it will be exciting as well"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R048",
+    "author": "Tae Texting fever",
+    "rating": 4,
+    "date": "2021-03-29",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "Instagram doesn't allow me to post pictures I've taken a long time ago, it only allows me to post pictures I've taken recently"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R049",
+    "author": "Prasanth Ganesan",
+    "rating": 4,
+    "date": "2021-03-31",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "Unable to view more than 25 stories. Please add see more button if possible."
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "Deep linking is not working sometimes"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "Dark mode"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R050",
+    "author": "Lofi Walker",
+    "rating": 5,
+    "date": "2021-04-03",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "It Did Not Have 'Theme' As Well As 'Video Chat' Option."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R051",
+    "author": "Harikrishnan",
+    "rating": 3,
+    "date": "2021-04-05",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "stories are getting replayed many times without me doing anything"
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "if you dont like a post it comes to your feed everytime over and over again until you like the post"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R052",
+    "author": "AlameZone Tech",
+    "rating": 1,
+    "date": "2021-04-06",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 5,
+        "quote": "my login details Password and Username was been successfully logged in without asking for That Two factor authentication Codes"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R053",
+    "author": "Piyush AryaPrakash",
+    "rating": 1,
+    "date": "2021-04-06",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "The feeds never get refreshed . You just have to scroll down and when you click refresh still you see the same feeds."
+      },
+      {
+        "category": "other",
+        "severity": 3,
+        "quote": "Doesn't support links"
+      },
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "Lags too much"
+      },
+      {
+        "category": "performance",
+        "severity": 3,
+        "quote": "Too much annoying while using the messenger"
+      },
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "Despite having a good internet connection it keeps laging saying something went wrong"
+      },
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "It's too slow"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R054",
+    "author": "Meisya Nurulia",
+    "rating": 5,
+    "date": "2021-04-16",
+    "app_version": null,
+    "issues": [],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R055",
+    "author": "Eymaan Mustafa",
+    "rating": 1,
+    "date": "2021-04-17",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 4,
+        "quote": "Not smooth at all considering how little data is required to run it."
+      },
+      {
+        "category": "reliability",
+        "severity": 3,
+        "quote": "Notifications' tab has to be refreshed either while using the app or when its closed."
+      },
+      {
+        "category": "reliability",
+        "severity": 4,
+        "quote": "I opened a chat and the messages weren't showing up...even when they did they weren't completely loading"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R056",
+    "author": "nikhil nikhil",
+    "rating": 5,
+    "date": "2021-04-17",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "we can't upload videos"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "we can't answer any stickers, questions, polls, etc"
+      },
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "if we didn't like a post that post remain in the feed until we like it"
+      },
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "we can't see any live"
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R057",
+    "author": "ɳiƙ",
+    "rating": 4,
+    "date": "2021-04-18",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 2,
+        "quote": "please don't autoplay the video feed on timeline."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R058",
+    "author": "TANMOY SEN",
+    "rating": 1,
+    "date": "2021-04-20",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "Instagram Lite App Play Store will add three new options to the new update 1. \"Data Saver\", 2. \"Multiple Photos\", 3. \"Video Call and Voice Record \"."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R059",
+    "author": "Liaqatali Nazari",
+    "rating": 3,
+    "date": "2021-04-22",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "other",
+        "severity": 4,
+        "quote": "One of the most annoying issue that I have faced since using Instagram is it's video autoplay."
+      }
+    ],
+    "mentioned_apps": []
+  },
+  {
+    "review_id": "R060",
+    "author": "aenean",
+    "rating": 3,
+    "date": "2021-04-24",
+    "app_version": null,
+    "issues": [
+      {
+        "category": "performance",
+        "severity": 2,
+        "quote": "A smoother UI"
+      },
+      {
+        "category": "design",
+        "severity": 2,
+        "quote": "dark mode"
+      }
+    ],
+    "mentioned_apps": [
+      "Facebook Lite"
+    ]
+  }
+]

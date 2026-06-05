@@ -1,0 +1,32 @@
+{
+  "fixed_literal": [
+    "ads",
+    "design",
+    "performance",
+    "price",
+    "reliability",
+    "support"
+  ],
+  "discovered": [
+    "app_crashes_and_bugs",
+    "display_ui_bugs",
+    "missing_features",
+    "performance_issues",
+    "positive_feedback"
+  ],
+  "discovered_not_in_literal": [
+    "app_crashes_and_bugs",
+    "display_ui_bugs",
+    "missing_features",
+    "performance_issues",
+    "positive_feedback"
+  ],
+  "literal_not_really_discussed": [
+    "ads",
+    "design",
+    "performance",
+    "price",
+    "reliability",
+    "support"
+  ]
+}
