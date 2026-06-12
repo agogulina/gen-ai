@@ -1,0 +1,528 @@
+{
+  "fixed": {
+    "strategy": "fixed",
+    "backend": "sbert",
+    "stats": "[fixed     | dense=sbert] чанков: 27 из 10 документов, средняя длина чанка 1583 симв.",
+    "n_questions": 14,
+    "hit_rate_at_5": 1.0,
+    "hit_rate_at_1": 0.786,
+    "full_hit_rate_at_5": 0.857,
+    "mean_recall_at_5": 0.917,
+    "mrr": 0.842,
+    "rows": [
+      {
+        "id": 1,
+        "type": "прямой",
+        "hard": false,
+        "gold_sources": [
+          "lang_python"
+        ],
+        "retrieved_sources_top5": [
+          "lang_python",
+          "lang_csharp",
+          "lang_haskell"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 2,
+        "type": "прямой",
+        "hard": false,
+        "gold_sources": [
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_go",
+          "lang_java",
+          "lang_python",
+          "lang_rust"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 3,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_rust"
+        ],
+        "retrieved_sources_top5": [
+          "lang_rust",
+          "lang_haskell",
+          "lang_cpp",
+          "lang_python"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 4,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_python"
+        ],
+        "retrieved_sources_top5": [
+          "lang_python",
+          "lang_cpp",
+          "lang_rust",
+          "lang_csharp"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 5,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_go",
+          "lang_rust",
+          "lang_javascript",
+          "lang_python"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 6,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_haskell"
+        ],
+        "retrieved_sources_top5": [
+          "lang_haskell",
+          "lang_kotlin",
+          "lang_cpp",
+          "lang_csharp",
+          "lang_python"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 7,
+        "type": "синоним",
+        "hard": true,
+        "gold_sources": [
+          "lang_kotlin"
+        ],
+        "retrieved_sources_top5": [
+          "lang_typescript",
+          "lang_cpp",
+          "lang_go",
+          "lang_kotlin"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 4,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 8,
+        "type": "синоним",
+        "hard": true,
+        "gold_sources": [
+          "lang_python",
+          "lang_java",
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_rust",
+          "lang_cpp",
+          "lang_java",
+          "lang_haskell"
+        ],
+        "hit": true,
+        "full_hit": false,
+        "first_gold_rank": 3,
+        "recall_at_5": 0.333
+      },
+      {
+        "id": 9,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_java",
+          "lang_kotlin"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_kotlin",
+          "lang_javascript"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 10,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_csharp",
+          "lang_typescript"
+        ],
+        "retrieved_sources_top5": [
+          "lang_typescript",
+          "lang_csharp",
+          "lang_haskell",
+          "lang_cpp"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 11,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_java",
+          "lang_javascript"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_haskell",
+          "lang_cpp",
+          "lang_python"
+        ],
+        "hit": true,
+        "full_hit": false,
+        "first_gold_rank": 1,
+        "recall_at_5": 0.5
+      },
+      {
+        "id": 12,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_rust",
+          "lang_cpp"
+        ],
+        "retrieved_sources_top5": [
+          "lang_cpp",
+          "lang_haskell",
+          "lang_rust",
+          "lang_go"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 13,
+        "type": "позитив",
+        "hard": false,
+        "gold_sources": [
+          "lang_rust"
+        ],
+        "retrieved_sources_top5": [
+          "lang_python",
+          "lang_kotlin",
+          "lang_typescript",
+          "lang_cpp",
+          "lang_rust"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 5,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 14,
+        "type": "перефраз",
+        "hard": false,
+        "gold_sources": [
+          "lang_java"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_javascript",
+          "lang_cpp",
+          "lang_kotlin"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      }
+    ]
+  },
+  "recursive": {
+    "strategy": "recursive",
+    "backend": "sbert",
+    "stats": "[recursive | dense=sbert] чанков: 173 из 10 документов, средняя длина чанка 320 симв.",
+    "n_questions": 14,
+    "hit_rate_at_5": 1.0,
+    "hit_rate_at_1": 0.714,
+    "full_hit_rate_at_5": 0.786,
+    "mean_recall_at_5": 0.905,
+    "mrr": 0.845,
+    "rows": [
+      {
+        "id": 1,
+        "type": "прямой",
+        "hard": false,
+        "gold_sources": [
+          "lang_python"
+        ],
+        "retrieved_sources_top5": [
+          "lang_python",
+          "lang_csharp"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 2,
+        "type": "прямой",
+        "hard": false,
+        "gold_sources": [
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_go",
+          "lang_java"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 3,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_rust"
+        ],
+        "retrieved_sources_top5": [
+          "lang_rust",
+          "lang_cpp"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 4,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_python"
+        ],
+        "retrieved_sources_top5": [
+          "lang_go",
+          "lang_python",
+          "lang_rust",
+          "lang_cpp"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 2,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 5,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_go",
+          "lang_javascript"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 6,
+        "type": "точный артикул",
+        "hard": false,
+        "gold_sources": [
+          "lang_haskell"
+        ],
+        "retrieved_sources_top5": [
+          "lang_haskell",
+          "lang_kotlin"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 7,
+        "type": "синоним",
+        "hard": true,
+        "gold_sources": [
+          "lang_kotlin"
+        ],
+        "retrieved_sources_top5": [
+          "lang_cpp",
+          "lang_python",
+          "lang_kotlin",
+          "lang_go"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 3,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 8,
+        "type": "синоним",
+        "hard": true,
+        "gold_sources": [
+          "lang_python",
+          "lang_java",
+          "lang_go"
+        ],
+        "retrieved_sources_top5": [
+          "lang_cpp",
+          "lang_java",
+          "lang_python",
+          "lang_javascript"
+        ],
+        "hit": true,
+        "full_hit": false,
+        "first_gold_rank": 2,
+        "recall_at_5": 0.667
+      },
+      {
+        "id": 9,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_java",
+          "lang_kotlin"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_kotlin",
+          "lang_haskell"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 10,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_csharp",
+          "lang_typescript"
+        ],
+        "retrieved_sources_top5": [
+          "lang_haskell",
+          "lang_typescript",
+          "lang_cpp"
+        ],
+        "hit": true,
+        "full_hit": false,
+        "first_gold_rank": 2,
+        "recall_at_5": 0.5
+      },
+      {
+        "id": 11,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_java",
+          "lang_javascript"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_haskell",
+          "lang_cpp"
+        ],
+        "hit": true,
+        "full_hit": false,
+        "first_gold_rank": 1,
+        "recall_at_5": 0.5
+      },
+      {
+        "id": 12,
+        "type": "multi-hop",
+        "hard": true,
+        "gold_sources": [
+          "lang_rust",
+          "lang_cpp"
+        ],
+        "retrieved_sources_top5": [
+          "lang_rust",
+          "lang_cpp",
+          "lang_haskell",
+          "lang_go"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 13,
+        "type": "позитив",
+        "hard": false,
+        "gold_sources": [
+          "lang_rust"
+        ],
+        "retrieved_sources_top5": [
+          "lang_rust",
+          "lang_typescript",
+          "lang_go"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      },
+      {
+        "id": 14,
+        "type": "перефраз",
+        "hard": false,
+        "gold_sources": [
+          "lang_java"
+        ],
+        "retrieved_sources_top5": [
+          "lang_java",
+          "lang_kotlin"
+        ],
+        "hit": true,
+        "full_hit": true,
+        "first_gold_rank": 1,
+        "recall_at_5": 1.0
+      }
+    ]
+  }
+}

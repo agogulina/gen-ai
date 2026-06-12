@@ -1,0 +1,18 @@
+# Полная конфигурация (как в семинаре) — нужна сеть для первой загрузки модели.
+# Офлайн-минимум (numpy + scikit-learn) достаточен для eval.py с RAG_BACKEND=tfidf.
+
+# ретрив
+scikit-learn>=1.3
+numpy>=1.24
+rank-bm25>=0.2.2                 # опционально: эталонный BM25 (в коде есть свой)
+sentence-transformers>=2.2       # dense-бэкенд sbert (paraphrase-multilingual-MiniLM-L12-v2)
+chromadb>=0.4                    # опционально: векторное хранилище из семинара
+
+# чанкинг
+langchain-text-splitters>=0.0.1  # эталонный RecursiveCharacterTextSplitter (в коде есть аналог)
+
+# генерация ответа (DeepSeek, OpenAI-совместимый API)
+openai>=1.0
+pydantic>=2.0
+httpx>=0.24
+python-dotenv>=1.0
