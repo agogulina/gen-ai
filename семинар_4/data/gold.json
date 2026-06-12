@@ -3,112 +3,118 @@
     "id": 1,
     "type": "прямой",
     "question": "Кто создал язык программирования Python?",
-    "gold_sources": ["lang_python"],
-    "hard": false,
-    "note": "имя автора (Гвидо ван Россум) есть в тексте дословно"
+    "gold_sources": [
+      "lang_python"
+    ]
   },
   {
     "id": 2,
     "type": "прямой",
     "question": "В каком году был официально представлен язык Go?",
-    "gold_sources": ["lang_go"],
-    "hard": false,
-    "note": "год (2009) присутствует явно"
+    "gold_sources": [
+      "lang_go"
+    ]
   },
   {
     "id": 3,
     "type": "точный артикул",
     "question": "Что такое borrow checker?",
-    "gold_sources": ["lang_rust"],
-    "hard": false,
-    "note": "редкий точный термин; встречается только в документе про Rust. Чувствителен к чанкингу: в большом fixed-чанке термин 'размывается'."
+    "gold_sources": [
+      "lang_rust"
+    ]
   },
   {
     "id": 4,
     "type": "точный артикул",
     "question": "Что делает команда import this?",
-    "gold_sources": ["lang_python"],
-    "hard": false,
-    "note": "точная команда; встречается один раз в Python"
+    "gold_sources": [
+      "lang_python"
+    ]
   },
   {
     "id": 5,
     "type": "точный артикул",
     "question": "Что такое горутины (goroutine) и как они запускаются?",
-    "gold_sources": ["lang_go"],
-    "hard": false,
-    "note": "точный термин Go"
+    "gold_sources": [
+      "lang_go"
+    ]
   },
   {
     "id": 6,
     "type": "точный артикул",
     "question": "Какой язык назван в честь логика Хаскелла Карри?",
-    "gold_sources": ["lang_haskell"],
-    "hard": false,
-    "note": "точное имя; только в Haskell"
+    "gold_sources": [
+      "lang_haskell"
+    ]
   },
   {
     "id": 7,
     "type": "синоним",
     "question": "Какой язык на этапе компиляции защищает от обращения к пустым ссылкам?",
-    "gold_sources": ["lang_kotlin"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ: в тексте про Kotlin нет слов 'пустые ссылки' — там 'null', 'нулевая ссылка', 'null safety'. Лексический поиск без синонимов это теряет; нужен dense."
+    "gold_sources": [
+      "lang_kotlin"
+    ]
   },
   {
     "id": 8,
     "type": "синоним",
     "question": "Какой язык избавляет разработчика от ручного освобождения памяти за счёт автоматической уборки мусора?",
-    "gold_sources": ["lang_python", "lang_java", "lang_go"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ: 'уборка мусора' вместо 'сборщик мусора', 'ручное освобождение' — синонимичные формулировки. Сразу несколько корректных источников."
+    "gold_sources": [
+      "lang_python",
+      "lang_java",
+      "lang_go"
+    ]
   },
   {
     "id": 9,
     "type": "multi-hop",
     "question": "Какие языки исполняются на виртуальной машине Java (JVM)?",
-    "gold_sources": ["lang_java", "lang_kotlin"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ multi-hop: нужно собрать 2 документа в топ-5. Дистракторы: C# ('напоминает модель Java с виртуальной машиной') и Go ('языки семейства JVM') тоже упоминают JVM, но сами на ней не исполняются."
+    "gold_sources": [
+      "lang_java",
+      "lang_kotlin"
+    ]
   },
   {
     "id": 10,
     "type": "multi-hop",
     "question": "Какие языки спроектировал Андерс Хейлсберг?",
-    "gold_sources": ["lang_csharp", "lang_typescript"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ multi-hop: имя архитектора встречается в двух документах одновременно."
+    "gold_sources": [
+      "lang_csharp",
+      "lang_typescript"
+    ]
   },
   {
     "id": 11,
     "type": "multi-hop",
     "question": "Какие языки программирования появились в 1995 году?",
-    "gold_sources": ["lang_java", "lang_javascript"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ multi-hop: один и тот же год в двух документах; нужно собрать оба."
+    "gold_sources": [
+      "lang_java",
+      "lang_javascript"
+    ]
   },
   {
     "id": 12,
     "type": "multi-hop",
     "question": "Какие компилируемые языки обходятся без сборщика мусора?",
-    "gold_sources": ["lang_rust", "lang_cpp"],
-    "hard": true,
-    "note": "СЛОЖНЫЙ multi-hop + ловушка: словосочетание 'сборщик мусора' есть во МНОГИХ документах (Python, Java, Go), но там он ЕСТЬ. Лексический поиск тянет дистракторы с 'сборщиком мусора'. Правильные — только те, где его НЕТ."
+    "gold_sources": [
+      "lang_rust",
+      "lang_cpp"
+    ]
   },
   {
     "id": 13,
     "type": "позитив",
     "question": "Какой язык несколько лет подряд называли самым любимым среди разработчиков?",
-    "gold_sources": ["lang_rust"],
-    "hard": false,
-    "note": "оценочная (позитивная) формулировка; в тексте Rust есть 'самый любимый язык'"
+    "gold_sources": [
+      "lang_rust"
+    ]
   },
   {
     "id": 14,
     "type": "перефраз",
     "question": "За счёт чего код на Java можно запускать без изменений на разных операционных системах?",
-    "gold_sources": ["lang_java"],
-    "hard": false,
-    "note": "перефраз принципа 'Write once, run anywhere' (байт-код + JVM)"
+    "gold_sources": [
+      "lang_java"
+    ]
   }
 ]
