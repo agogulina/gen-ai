@@ -16,9 +16,9 @@ def compare_periods(
     """
 ```
 
-Вызывает `get_fx_rate / get_key_rate / get_inflation /
+Вызывает get_fx_rate / get_key_rate / get_inflation /
 get_unemployment. Период `YYYY-MM` разворачивается в
-последний день месяца; ошибка возвращается как `{"metric": ..., "error": ...}`.
+последний день месяца; ошибка возвращается как `{"metric": ..., "error": ...}.
 
 Примеры запросов, где инструмент вызывается:
 
