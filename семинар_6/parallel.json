@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "qid": "Q1",
+      "query": "Во сколько раз USD подорожал с 1 января 2022 по сегодня?",
+      "n_subquestions": 3,
+      "level_sizes": [
+        2,
+        1
+      ],
+      "sequential_sec": 14.026,
+      "parallel_sec": 8.181,
+      "speedup": 1.714
+    },
+    {
+      "qid": "Q5",
+      "query": "Каковы были курс доллара, ключевая ставка ЦБ и инфляция (ИПЦ г/г) на 15 марта 2026?",
+      "n_subquestions": 3,
+      "level_sizes": [
+        3
+      ],
+      "sequential_sec": 9.489,
+      "parallel_sec": 4.335,
+      "speedup": 2.189
+    }
+  ]
+}

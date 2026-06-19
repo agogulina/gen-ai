@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "name": "get_cagr_hallucination",
+      "reasoning": "Посчитать среднегодовой темп роста курса доллара.",
+      "subquestions": [
+        {
+          "id": 1,
+          "expected_tools": [
+            "get_cagr"
+          ],
+          "depends_on": []
+        }
+      ],
+      "errors": [
+        "подвопрос 1: инструмент 'get_cagr' не существует (разрешены ['calculate', 'get_fx_rate', 'get_inflation', 'get_key_rate'])"
+      ]
+    },
+    {
+      "name": "get_forecast_hallucination",
+      "reasoning": "Спрогнозировать курс и усреднить ставку.",
+      "subquestions": [
+        {
+          "id": 1,
+          "expected_tools": [
+            "get_forecast"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": 2,
+          "expected_tools": [
+            "get_average"
+          ],
+          "depends_on": []
+        },
+        {
+          "id": 3,
+          "expected_tools": [
+            "calculate"
+          ],
+          "depends_on": [
+            9
+          ]
+        }
+      ],
+      "errors": [
+        "подвопрос 1: инструмент 'get_forecast' не существует (разрешены ['calculate', 'get_fx_rate', 'get_inflation', 'get_key_rate'])",
+        "подвопрос 2: инструмент 'get_average' не существует (разрешены ['calculate', 'get_fx_rate', 'get_inflation', 'get_key_rate'])",
+        "подвопрос 3: зависит от несуществующего id=9"
+      ]
+    }
+  ]
+}
