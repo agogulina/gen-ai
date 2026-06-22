@@ -23,7 +23,7 @@ python eval.py
 **Дополнительный прогон — публичный датасет (3 класса).**
 Положите `train.csv`/`test.csv` (HF `cnamuangtoun/resume-job-description-fit`) в `input/`, затем:
 ```bash
-python prepare_data.py --per-class 6   # пересоберёт input/eval_set.jsonl (18 пар)
+python prepare_data.py --per-class 6   # (18 пар)
 python eval.py
 ```
 
@@ -42,7 +42,6 @@ python eval.py
 | `judge.py` | LLM-as-judge (groundedness/relevance) |
 | `eval.py` | прогон на ≥15 входах: правильность + путь + галлюцинации |
 | `prepare_data.py` | выборка из публичного `test.csv` (для доп. прогона) |
-| `fill_report.py` | подстановка метрик в `отчёт.md` |
 | `llm_client.py` | DeepSeek-клиент (JSON-инструктор + raw) + учёт токенов |
 | `input/eval_set.jsonl` | синтетический датасет (основной прогон) |
 | `output/` | артефакты прогона |
