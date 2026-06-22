@@ -32,7 +32,7 @@ python eval.py
 ## Что где лежит
 | Файл | Роль |
 |---|---|
-| `schema.py` | pydantic-модели + `field_validator`/`model_validator` (бизнес-инварианты) |
+| `schema.py` | pydantic-модели + `field_validator`/`model_validator`  |
 | `retrieval.py` | RAG: Okapi BM25 по фрагментам резюме  |
 | `tools.py` | инструменты агента: `search_resume`, `check_skill_present` |
 | `agent.py` | извлечение требований + ReAct-агент + покрытие навыков + `FitAssessment` |
