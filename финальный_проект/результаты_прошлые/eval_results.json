@@ -1,0 +1,56 @@
+{
+  "n": 18,
+  "mode": "3-class",
+  "labels": [
+    "No Fit",
+    "Potential Fit",
+    "Good Fit"
+  ],
+  "scored": 18,
+  "errors": 0,
+  "exact_accuracy": 0.389,
+  "adjacent_accuracy": 0.833,
+  "macro_f1": 0.381,
+  "confusion_matrix": {
+    "No Fit": {
+      "No Fit": 4,
+      "Potential Fit": 2,
+      "Good Fit": 0
+    },
+    "Potential Fit": {
+      "No Fit": 5,
+      "Potential Fit": 1,
+      "Good Fit": 0
+    },
+    "Good Fit": {
+      "No Fit": 3,
+      "Potential Fit": 1,
+      "Good Fit": 2
+    }
+  },
+  "judge_avg": {
+    "groundedness": 3.56,
+    "relevance": 3.72
+  },
+  "path": {
+    "avg_steps": 16.61,
+    "avg_tool_calls": 23.17,
+    "llm_calls": 135,
+    "total_tokens": 209153,
+    "approx_cost_usd": 0.0793,
+    "wall_sec": 397.2
+  },
+  "hallucination": {
+    "assessments": 18,
+    "assessments_with_any_ghost": 5,
+    "share_with_ghost": 0.278,
+    "total_evidence": 23,
+    "ghost_quotes": 4,
+    "ghost_skills": 3,
+    "ghost_quote_rate": 0.174
+  },
+  "config": {
+    "use_skeptic": true,
+    "use_judge": true
+  }
+}
