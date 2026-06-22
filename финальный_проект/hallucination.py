@@ -1,11 +1,3 @@
-"""
-Проверка галлюцинаций (обязательный блок рубрики).
-
-Матчер обязан подтверждать совпавшие навыки ДОСЛОВНЫМИ цитатами из резюме.
-Здесь мы проверяем, что каждая цитата действительно присутствует в тексте
-резюме (ghost-quote), и что заявленный навык реально упоминается (ghost-skill).
-Возвращаем и «очищенную» оценку, и числовые метрики для отчёта.
-"""
 
 from __future__ import annotations
 
@@ -18,22 +10,16 @@ _WS = re.compile(r"\s+")
 
 
 def _norm(text: str) -> str:
-    # нормализация для устойчивого сравнения: нижний регистр, схлопнутые пробелы
     return _WS.sub(" ", (text or "").lower()).strip()
 
 
 def quote_is_grounded(quote: str, resume_text: str) -> bool:
-    """Цитата считается подтверждённой, если дословно (после нормализации
-    пробелов/регистра) встречается в резюме. Допускаем небольшую обрезку
-    хвостовых знаков препинания."""
     nq = _norm(quote).strip(" .,:;—-")
     nr = _norm(resume_text)
     if not nq:
         return False
     if nq in nr:
         return True
-    # запасной критерий: совпадает длинная подстрока (>=85% слов подряд),
-    # чтобы не штрафовать за один лишний пробел/символ внутри
     words = nq.split()
     if len(words) >= 6:
         head = " ".join(words[: max(6, int(len(words) * 0.85))])
@@ -64,13 +50,6 @@ class GhostReport:
 def verify_assessment(
     assessment: FitAssessment, resume_text: str
 ) -> tuple[FitAssessment, GhostReport]:
-    """Проверить доказательства и при необходимости ПОНИЗИТЬ оценку.
-
-    Логика: цитаты-призраки выкидываем. Навык считается подтверждённым только
-    если на него есть хотя бы одна grounded-цитата. Если после чистки у вердикта
-    «Good Fit» не осталось ни одного подтверждённого навыка — понижаем до
-    «Potential Fit» (а если и навыков-упоминаний нет — до «No Fit»).
-    """
     rep = GhostReport(total_evidence=len(assessment.evidence))
     nr = _norm(resume_text)
 
@@ -85,7 +64,6 @@ def verify_assessment(
             rep.ghost_quotes += 1
             rep.ghost_examples.append(ev.quote[:80])
 
-    # ghost-skill: заявленный matched_skill, которого нет в тексте резюме вовсе
     clean_matched: list[str] = []
     for sk in assessment.matched_skills:
         if _norm(sk) and _norm(sk) in nr:
@@ -96,12 +74,10 @@ def verify_assessment(
 
     rep.had_any_ghost = (rep.ghost_quotes > 0) or (rep.ghost_skills > 0)
 
-    # навыки, реально подтверждённые grounded-цитатой, всегда оставляем
     for ev in clean_ev:
         if ev.skill.lower() not in {m.lower() for m in clean_matched}:
             clean_matched.append(ev.skill)
 
-    # пересборка оценки с понижением при недостатке доказательств
     new_fit = assessment.fit
     if assessment.fit == "Good Fit" and not grounded_skills:
         new_fit = "Potential Fit" if clean_matched else "No Fit"
@@ -129,7 +105,6 @@ def verify_assessment(
 
 
 def aggregate_ghost(reports: list[GhostReport]) -> dict:
-    """Сводные метрики галлюцинаций по всему прогону (для output/ и отчёта)."""
     n = len(reports)
     with_ghost = sum(1 for r in reports if r.had_any_ghost)
     tot_ev = sum(r.total_evidence for r in reports)

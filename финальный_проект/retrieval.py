@@ -1,10 +1,4 @@
-"""
-RAG-ретривер по тексту резюме — Okapi BM25, написан руками (без LangChain и
-без векторных БД). Идея: не пихать всё резюме (медиана ~5000 символов) в промпт,
-а под каждое требование вакансии доставать только релевантные фрагменты.
 
-Используется и как инструмент агента (search_resume), и для grounding-доказательств.
-"""
 
 from __future__ import annotations
 
@@ -27,7 +21,6 @@ def tokenize(text: str) -> list[str]:
 
 
 def chunk_text(text: str, *, max_chars: int = 320) -> list[str]:
-    """Резюме → список фрагментов (по строкам/предложениям, с укрупнением)."""
     raw = re.split(r"(?<=[.!?])\s+|\n+", text or "")
     chunks: list[str] = []
     buf = ""
@@ -54,7 +47,6 @@ class Hit:
 
 
 class BM25:
-    """Минимальный Okapi BM25 над набором фрагментов одного документа."""
 
     def __init__(self, chunks: list[str], *, k1: float = 1.5, b: float = 0.75):
         self.chunks = chunks
@@ -75,7 +67,6 @@ class BM25:
 
     def _idf(self, term: str) -> float:
         n = self.df.get(term, 0)
-        # idf со сглаживанием (как в классическом BM25), не уходим в минус
         return math.log(1 + (self.N - n + 0.5) / (n + 0.5))
 
     def search(self, query: str, top_k: int = 3) -> list[Hit]:

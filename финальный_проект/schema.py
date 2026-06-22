@@ -1,10 +1,4 @@
-"""
-Структурированный вывод системы матчинга «резюме ↔ вакансия».
 
-Здесь сосредоточены бизнес-инварианты предметной области в виде
-field_validator / model_validator — модель обязана возвращать данные,
-которые им удовлетворяют (а llm_client делает max_retries при нарушении).
-"""
 
 from __future__ import annotations
 
@@ -25,12 +19,8 @@ class Seniority(str, Enum):
     unknown = "unknown"
 
 
-# ---------------------------------------------------------------------------
-# 1. Требования вакансии (извлекаются Планировщиком/экстрактором)
-# ---------------------------------------------------------------------------
+# Требования вакансии
 class JobRequirements(BaseModel):
-    """Структурированные требования из текста вакансии."""
-
     title: str = Field(..., description="Краткое название роли")
     must_have_skills: list[str] = Field(
         default_factory=list, description="Ключевые обязательные навыки (3-10 коротких тегов)"
@@ -44,7 +34,6 @@ class JobRequirements(BaseModel):
     @field_validator("min_years_experience")
     @classmethod
     def years_non_negative_and_sane(cls, v: float) -> float:
-        # бизнес-инвариант: опыт не отрицательный и не абсурдный
         if v < 0:
             raise ValueError("min_years_experience не может быть отрицательным")
         if v > 60:
@@ -54,7 +43,6 @@ class JobRequirements(BaseModel):
     @field_validator("must_have_skills", "nice_to_have_skills")
     @classmethod
     def normalize_skills(cls, v: list[str]) -> list[str]:
-        # чистим пустые/дубликаты, приводим к нижнему регистру тегов
         out, seen = [], set()
         for s in v:
             s2 = " ".join(str(s).split()).strip()
@@ -65,12 +53,8 @@ class JobRequirements(BaseModel):
         return out
 
 
-# ---------------------------------------------------------------------------
-# 2. Единица доказательства: навык + ДОСЛОВНАЯ цитата из резюме
-# ---------------------------------------------------------------------------
+# Единица доказательства:
 class Evidence(BaseModel):
-    """Подтверждение навыка дословной цитатой из резюме (для ghost-проверки)."""
-
     skill: str = Field(..., description="Какой навык/требование подтверждает цитата")
     quote: str = Field(
         ..., description="ДОСЛОВНАЯ цитата из текста резюме (копировать точно, без пересказа)"
@@ -82,14 +66,10 @@ class Evidence(BaseModel):
         v = " ".join(str(v).split()).strip()
         if len(v) < 2:
             raise ValueError("пустая цитата")
-        return v[:400]  # длинное — обрезаем, а не отвергаем
-
-
-# ---------------------------------------------------------------------------
-# 3. Итоговая оценка соответствия
-# ---------------------------------------------------------------------------
+        return v[:400]
+        
+# Итоговая оценка соответствия
 class FitAssessment(BaseModel):
-    """Итог матчинга: метка соответствия + обоснование с доказательствами."""
 
     fit: Literal["No Fit", "Potential Fit", "Good Fit"]
     confidence: float = Field(..., ge=0.0, le=1.0, description="Уверенность 0..1")
@@ -109,8 +89,6 @@ class FitAssessment(BaseModel):
 
     @model_validator(mode="after")
     def good_fit_needs_evidence(self) -> "FitAssessment":
-        # Бизнес-инвариант: вердикт "Good Fit" обязан опираться хотя бы на одно
-        # подтверждённое доказательство и хотя бы один совпавший навык.
         if self.fit == "Good Fit":
             if not self.matched_skills:
                 raise ValueError("Good Fit без matched_skills недопустим")
@@ -119,23 +97,16 @@ class FitAssessment(BaseModel):
         return self
 
 
-# ---------------------------------------------------------------------------
-# 4. Вердикт скептика (мультиагент)
-# ---------------------------------------------------------------------------
+# Вердикт скептика
 class SkepticVerdict(BaseModel):
-    """Критик-скептик проверяет, не завышена ли оценка."""
 
     agree: bool = Field(..., description="True, если согласен с оценкой матчера")
     adjusted_fit: Literal["No Fit", "Potential Fit", "Good Fit"]
     reason: str = Field(..., description="Что именно вызвало сомнение / почему согласен")
 
 
-# ---------------------------------------------------------------------------
-# 5. Вердикт судьи (LLM-as-judge, используется в eval)
-# ---------------------------------------------------------------------------
+# Вердикт судьи
 class JudgeVerdict(BaseModel):
-    """Независимая оценка ОБОСНОВАННОСТИ ответа (не путать с правильностью метки)."""
-
     groundedness: int = Field(..., ge=1, le=5, description="1..5: насколько вывод опирается на резюме/вакансию")
     relevance: int = Field(..., ge=1, le=5, description="1..5: отвечает ли обоснование на вопрос соответствия")
     comment: str = ""
@@ -149,7 +120,6 @@ class JudgeVerdict(BaseModel):
 
 
 if __name__ == "__main__":
-    # быстрая проверка инвариантов
     ok = FitAssessment(fit="Good Fit", confidence=0.8, matched_skills=["python"],
                        evidence=[Evidence(skill="python", quote="Developed services in Python")],
                        rationale="strong overlap")

@@ -1,11 +1,4 @@
-"""
-Инструменты матчер-агента. Работают над ОДНИМ резюме: агент не получает весь
-текст в промпт, а достаёт релевантные фрагменты через RAG (search_resume) и
-проверяет наличие конкретного навыка (check_skill_present).
 
-Каждый инструмент возвращает dict (как в семинарах). Реализации привязываются к
-контексту конкретной пары через make_tools().
-"""
 
 from __future__ import annotations
 
@@ -51,7 +44,6 @@ TOOL_SCHEMAS = [
 
 
 def make_tools(resume_text: str, index: BM25 | None = None):
-    """Вернуть (TOOLS_IMPL, used_log) для конкретного резюме."""
     idx = index or build_index(resume_text)
     low = resume_text.lower()
     used: list[dict] = []

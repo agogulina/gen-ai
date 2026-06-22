@@ -1,13 +1,6 @@
-"""
-Подготовка eval-набора: стратифицированная выборка пар из input/test.csv
-(реальный датасет cnamuangtoun/resume-job-description-fit, метки
-No Fit / Potential Fit / Good Fit).
 
-Пишет input/eval_set.jsonl с полями: id, resume_text, job_description_text, label.
-Детерминированно (random seed), чтобы прогон воспроизводился.
+#Подготовка eval-набора: стратифицированная выборка пар из input/test.csv (реальный датасет cnamuangtoun/resume-job-description-fit, метки No Fit / Potential Fit / Good Fit).
 
-Запуск:  python prepare_data.py --per-class 6     # 18 пар (>=15)
-"""
 
 from __future__ import annotations
 
@@ -94,10 +87,9 @@ def main():
     if not src.exists():
         sys.exit(f"Нет файла {src}. Положите train.csv/test.csv в input/ (см. README).")
 
-    # в бинарном режиме классов 2 — берём больше на класс, чтобы было >=15 пар
     per_class = args.per_class
     if args.binary and per_class < 8:
-        per_class = 12  # 12+12 = 24 пары
+        per_class = 12  #
 
     data = build(per_class, args.seed, src, binary=args.binary,
                  explicit_skills=args.explicit_skills)

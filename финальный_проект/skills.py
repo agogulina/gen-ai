@@ -1,19 +1,9 @@
-"""
-Словарь синонимов навыков и «мягкая» проверка присутствия навыка в резюме.
-
-Цель — поднять recall лексического покрытия: засчитывать навык, если в резюме
-встречается он сам ИЛИ любой его синоним/вариант написания, с нормализацией
-(нижний регистр, без пунктуации, ед./мн. число, типовые сокращения).
-
-Это не семантические эмбеддинги, а явный курируемый словарь — прозрачно и
-воспроизводимо, в духе «руками, без фреймворков».
-"""
 
 from __future__ import annotations
 
 import re
 
-# группы эквивалентных терминов; направление значения не важно — это классы синонимов
+# группы эквивалентных терминов
 _SYNONYM_GROUPS: list[set[str]] = [
     {"kubernetes", "k8s"},
     {"javascript", "js", "ecmascript"},
@@ -59,7 +49,6 @@ _SYNONYM_GROUPS: list[set[str]] = [
     {"communication", "stakeholder communication", "interpersonal"},
 ]
 
-# индекс: term -> set всех эквивалентов (включая сам term)
 _INDEX: dict[str, set[str]] = {}
 for grp in _SYNONYM_GROUPS:
     for t in grp:
@@ -74,12 +63,10 @@ def _norm(text: str) -> str:
 
 
 def expand_skill(skill: str) -> set[str]:
-    """Навык -> множество его вариантов написания/синонимов (нормализованных)."""
     base = _norm(skill)
     variants = {base}
     if base in _INDEX:
         variants |= {_norm(x) for x in _INDEX[base]}
-    # ед./мн. число — грубо
     if base.endswith("s") and len(base) > 3:
         variants.add(base[:-1])
     else:
@@ -88,11 +75,9 @@ def expand_skill(skill: str) -> set[str]:
 
 
 def skill_present(skill: str, resume_norm: str) -> bool:
-    """Найден ли навык (или его синоним) в НОРМАЛИЗОВАННОМ тексте резюме."""
     for v in expand_skill(skill):
         if not v:
             continue
-        # границы слова, чтобы 'go' не ловило 'good'
         if re.search(r"(?<![a-z0-9])" + re.escape(v) + r"(?![a-z0-9])", resume_norm):
             return True
     return False
@@ -102,8 +87,6 @@ def normalize_resume(resume_text: str) -> str:
     return _norm(resume_text)
 
 
-# Слишком общие «навыки»: встречаются почти в любом резюме и не различают
-# кандидатов — исключаем их из расчёта покрытия (иначе дают ложный Fit).
 GENERIC_SKILLS = {
     "communication", "teamwork", "team work", "leadership", "problem solving",
     "time management", "collaboration", "interpersonal", "organization",

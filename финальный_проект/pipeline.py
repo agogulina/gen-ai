@@ -1,13 +1,4 @@
-"""
-Сквозной конвейер матчинга одной пары (резюме, вакансия).
 
-Этапы:
-  извлечение требований → агент-матчер (RAG+tools) → структурный FitAssessment
-  → проверка галлюцинаций (ghost-quote/skill, с понижением вердикта)
-  → скептик (мультиагент, может понизить ещё) → итог.
-
-Возвращает плоский dict, удобный для логирования в output/ и для eval.
-"""
 
 from __future__ import annotations
 
@@ -22,30 +13,21 @@ def assess_pair(resume_text: str, job_description: str, *, use_skeptic: bool = T
     req = out["requirements"]
     raw: FitAssessment = out["assessment"]
     coverage = out["coverage"]
-    cov_label = out["coverage_label"]          # детерминированный калиброванный якорь
+    cov_label = out["coverage_label"]
     cov_ratio = coverage["ratio"]
 
-    # --- проверка галлюцинаций: убрать ghost-цитаты, посчитать метрики ---
     verified, ghost = verify_assessment(raw, resume_text)
 
-    # --- backfill: подтверждённые покрытием навыки всегда попадают в matched ---
     matched = list(dict.fromkeys([*verified.matched_skills, *coverage["present"]]))
     missing = coverage["absent"]
 
-    # --- решение: ЩЕДРАЯ комбинация двух сигналов ---
-    # LLM даёт холистическую оценку роли, покрытие — объективный сигнал по навыкам.
-    # Берём более «щедрую» из двух: LLM может поднять низкое покрытие (профильный
-    # опыт «другими словами»), покрытие может поднять заниженную LLM-оценку
-    # (нашлись навыки по синонимам). Это правильно для скрининга (важнее не
-    # потерять подходящего кандидата).
     base_order = max(FIT_ORDER[verified.fit], FIT_ORDER[cov_label])
     final_fit = FIT_LABELS[base_order]
 
-    # Good Fit без доказательств недопустим — мягко понижаем
+    # Good Fit без доказательств недопустим
     if final_fit == "Good Fit" and not verified.evidence and not matched:
         final_fit = "Potential Fit"
 
-    # --- скептик: мультиагент, может ПОНИЗИТЬ максимум на один шаг ---
     skeptic = None
     if use_skeptic:
         sv = skeptic_review(req, verified)
@@ -54,11 +36,8 @@ def assess_pair(resume_text: str, job_description: str, *, use_skeptic: bool = T
             stepped = max(FIT_ORDER[final_fit] - 1, FIT_ORDER[sv.adjusted_fit], 0)
             final_fit = FIT_LABELS[stepped]
             if cov_ratio >= FIT_THRESHOLD and final_fit == "No Fit":
-                final_fit = "Potential Fit"  # при ненулевом покрытии не роняем в No Fit
+                final_fit = "Potential Fit" # при ненулевом покрытии не уводим в No Fit
 
-    # --- backfill доказательств: для совпавших навыков подставляем РЕАЛЬНЫЙ
-    #     фрагмент резюме как цитату (groundedness ↑, «доказательства» не пустые).
-    #     BM25 возвращает всегда настоящий текст резюме — это не галлюцинация. ---
     from retrieval import build_index
     idx = build_index(resume_text)
     have = {e.skill.lower() for e in verified.evidence}

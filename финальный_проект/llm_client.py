@@ -1,34 +1,4 @@
-"""
-Фабрика OpenAI-совместимого клиента + лёгкий JSON-инструктор.
 
-Все параметры берутся из окружения (или .env через python-dotenv).
-Поддержан self-signed хост: verify=False, таймаут 200 с.
-
-Ожидаемые переменные окружения:
-  LLM_BASE_URL   — базовый URL в духе https://host/v1
-  LLM_AUTH_TOKEN — bearer-токен
-  LLM_MODEL      — имя модели для chat.completions
-
-Fallback: если LLM_BASE_URL не задан — идём в публичный OpenAI и требуем OPENAI_API_KEY.
-
-Почему тут свой JSON-слой, а не `instructor`
---------------------------------------------
-Мы ходим в разные self-hosted эндпоинты (Qwen/vLLM, gpt-oss через hydragpt и т.п.).
-У каждого свои причуды:
-  * vLLM+xgrammar валится на pydantic-схемах с `$defs` (tool-calling mode).
-  * gpt-oss любит досылать после JSON токены harmony вида `<|constrain|>json<|message|>{...}`,
-    из-за чего pydantic видит trailing characters и падает.
-
-Нам не нужен весь instructor с его tool-calling/retry-семантикой. Хватает:
-  1. Послать запрос с response_format={"type":"json_object"} (общий знаменатель).
-  2. Достать из ответа первый валидный JSON-объект или массив, игнорируя мусор.
-  3. Сверить с pydantic.
-Всё это — 60 строк, зато контроль полный.
-
-wrap_openai_json() оборачивает низкоуровневый OpenAI-клиент в объект с
-drop-in API `client.chat.completions.create(..., response_model=...)` — чтобы
-вызывающий код не менял каждый вызов.
-"""
 from __future__ import annotations
 
 import json
@@ -41,20 +11,17 @@ import httpx
 from openai import OpenAI
 from pydantic import BaseModel, TypeAdapter
 
-# .env загрузим, если есть python-dotenv. find_dotenv ходит вверх по дереву каталогов.
 try:
     from dotenv import load_dotenv, find_dotenv
     load_dotenv(find_dotenv(usecwd=True))
 except ImportError:
     pass
 
-# Глушим InsecureRequestWarning из urllib3 — verify=False намеренно.
 warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 
 T = TypeVar("T")
 
-# --- учёт токенов/вызовов (для метрик «пути» в eval финального проекта) ---
 USAGE = {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0}
 
 
@@ -69,7 +36,6 @@ def get_usage() -> dict:
 
 
 def _acc(resp) -> None:
-    """Аккуратно прибавить usage из ответа OpenAI-совместимого API."""
     try:
         USAGE["calls"] += 1
         u = getattr(resp, "usage", None)
@@ -106,27 +72,10 @@ def get_model() -> str:
     return os.environ.get("LLM_MODEL", "gpt-4.1-mini")
 
 
-# ---------------------------------------------------------------------------
-# JSON-парсинг из грязного ответа LLM
-# ---------------------------------------------------------------------------
-
 _HARMONY_RE = re.compile(r"<\|[^|>]*\|>")
 
 
 def _thinking_off_payload() -> dict:
-    """
-    Собрать kwargs, которые отключают reasoning-режим на большинстве
-    OpenAI-совместимых серверов. Если переменная окружения LLM_THINKING=on —
-    возвращаем пустой dict (думай, сколько хочешь).
-
-    Обоснование:
-      * Qwen3 / QwQ на vLLM: `extra_body={"chat_template_kwargs": {"enable_thinking": False}}`
-        — штатный способ, документирован Qwen.
-      * gpt-oss / SGLang / vLLM: `reasoning_effort="none"` (у SGLang это literal
-        из {none, low, medium, high}; у OpenAI gpt-oss допустим и "minimal", но
-        "none" приняли обе вселенные, поэтому используем его).
-      * Незнакомые поля сервер обычно игнорирует, так что кидаем оба сразу.
-    """
     if os.environ.get("LLM_THINKING", "off").lower() in ("on", "1", "true", "yes"):
         return {}
     return {
@@ -136,16 +85,13 @@ def _thinking_off_payload() -> dict:
 
 
 def _clean(text: str) -> str:
-    """Снять harmony-токены и markdown-обёртку."""
     text = _HARMONY_RE.sub("", text).strip()
-    # ```json ... ```
     text = re.sub(r"^```(?:json)?\s*\n?", "", text)
     text = re.sub(r"\n?```\s*$", "", text)
     return text.strip()
 
 
 def _extract_first_json(text: str):
-    """Найти и декодировать первый сбалансированный JSON (object|array)."""
     t = _clean(text)
     decoder = json.JSONDecoder()
     for i, ch in enumerate(t):
@@ -157,10 +103,6 @@ def _extract_first_json(text: str):
                 continue
     raise ValueError(f"В ответе не найдено валидного JSON: {text[:300]!r}")
 
-
-# ---------------------------------------------------------------------------
-# Drop-in обёртка с API, совместимым с instructor
-# ---------------------------------------------------------------------------
 
 class _Completions:
     def __init__(self, client: OpenAI):
@@ -176,7 +118,6 @@ class _Completions:
         temperature: float = 0.0,
         **kw: Any,
     ) -> T:
-        # list[Model] → оборачиваем в {items: [...]}, т.к. JSON mode требует object
         wrap_list = get_origin(response_model) is list
         if wrap_list:
             item_type = get_args(response_model)[0]
@@ -208,7 +149,6 @@ class _Completions:
         else:
             msgs.insert(0, {"role": "system", "content": addendum.lstrip()})
 
-        # Отключаем reasoning — иначе Qwen3 может по 30+ секунд «думать» перед ответом.
         thinking_kw = _thinking_off_payload()
 
         def _call(kw: dict):
@@ -221,7 +161,6 @@ class _Completions:
                     **kw,
                 )
             except TypeError:
-                # Старый SDK не знает reasoning_effort
                 safe = {k: v for k, v in kw.items() if k != "reasoning_effort"}
                 return self._c.chat.completions.create(
                     model=model,
@@ -238,7 +177,6 @@ class _Completions:
                 try:
                     resp = _call(thinking_kw)
                 except Exception as sdk_err:
-                    # Сервер не переварил reasoning_effort / extra_body — сбросим их и повторим.
                     msg = str(sdk_err)
                     bad = "reasoning_effort" in msg or "chat_template_kwargs" in msg or "enable_thinking" in msg
                     if bad and thinking_kw:
@@ -269,7 +207,6 @@ class _Chat:
 
 
 class JsonClient:
-    """Drop-in замена instructor-клиента."""
 
     def __init__(self, openai_client: OpenAI):
         self._c = openai_client
@@ -277,21 +214,9 @@ class JsonClient:
 
 
 def make_client() -> JsonClient:
-    """Вернуть клиент с API `client.chat.completions.create(..., response_model=...)`."""
     return JsonClient(_make_openai_client())
 
-
-# ---------------------------------------------------------------------------
-# «Сырой» клиент без JSON-инструктора, но с автоотключением reasoning
-# ---------------------------------------------------------------------------
-# Нам нужен в семинаре 2: мы хотим увидеть грязный ответ модели как есть
-# (markdown, «возраст словом», пост-амбула). Но reasoning всё равно надо
-# гасить — иначе Qwen3 думает по 30 секунд перед каждым ответом, а никакого
-# учебного смысла это не несёт.
-
-
 class _RawCompletions:
-    """Прокси над openai.chat.completions: инжектирует thinking-off kwargs."""
 
     def __init__(self, inner):
         self._inner = inner
@@ -303,7 +228,6 @@ class _RawCompletions:
             try:
                 return self._inner.create(**kw, **extra)
             except TypeError:
-                # Старый SDK не знает reasoning_effort — снимаем и повторяем.
                 safe = {k: v for k, v in extra.items() if k != "reasoning_effort"}
                 return self._inner.create(**kw, **safe)
 
@@ -319,7 +243,6 @@ class _RawCompletions:
                 or "enable_thinking" in msg
             )
             if bad and thinking:
-                # Сервер не переварил — повторим без thinking-kwargs.
                 r = _call({})
                 _acc(r)
                 return r
@@ -332,28 +255,13 @@ class _RawChat:
 
 
 class RawClient:
-    """
-    Тонкая обёртка над OpenAI-клиентом: интерфейс такой же
-    (`client.chat.completions.create(...)`), но каждый вызов автоматически
-    получает kwargs «выключи reasoning», с graceful fallback-ом, если сервер
-    не узнаёт эти поля.
-    """
-
     def __init__(self, openai_client: OpenAI):
         self._c = openai_client
         self.chat = _RawChat(openai_client.chat)
 
-    # Прокси-доступ ко всему остальному (embeddings, models и т.п.), чтобы
-    # не мешать тем, кто захочет их вызвать.
     def __getattr__(self, name: str) -> Any:
         return getattr(self._c, name)
 
 
 def make_raw_client() -> RawClient:
-    """
-    Вернуть «сырой» клиент без JSON-инструктора, но с выключенным reasoning.
-    Нужен, когда хочется увидеть грязный ответ модели как есть (например, в
-    учебном «сломанном» скрипте семинара 2, где мы специально ловим markdown,
-    «возраст словом» и прочие прелести).
-    """
     return RawClient(_make_openai_client())

@@ -1,7 +1,4 @@
-"""
-Подставить метрики из output/eval_results.json (и примеры провалов из
-output/traces.jsonl) в отчёт.md. Запускать после eval.py.
-"""
+
 
 from __future__ import annotations
 
