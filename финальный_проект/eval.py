@@ -1,4 +1,20 @@
+"""
+Eval финального проекта.
 
+Прогоняет конвейер по input/eval_set.jsonl и считает:
+  ПРАВИЛЬНОСТЬ (по gold-меткам датасета):
+    - exact accuracy (3 класса), adjacent accuracy (ordinal: No<Potential<Good),
+    - macro-F1, матрица ошибок;
+  ПУТЬ/КАЧЕСТВО:
+    - LLM-as-judge: средние groundedness и relevance (1..5),
+    - среднее число шагов агента и вызовов инструментов, токены/стоимость;
+  ГАЛЛЮЦИНАЦИИ:
+    - доля ответов с ghost-цитатой/навыком, всего ghost-цитат, ghost-rate.
+
+Артефакты в output/: eval_results.json, eval_table.md, predictions.csv, traces.jsonl.
+Запуск:  python eval.py            (весь eval_set.jsonl)
+         python eval.py --limit 6  (первые 6 пар, дымовой прогон)
+"""
 
 from __future__ import annotations
 
@@ -21,6 +37,7 @@ HERE = Path(__file__).resolve().parent
 EVAL_SET = HERE / "input" / "eval_set.jsonl"
 OUT = HERE / "output"
 
+# ориентировочная цена DeepSeek deepseek-chat (USD за 1М токенов); поправьте при желании
 PRICE_IN = 0.27 / 1_000_000
 PRICE_OUT = 1.10 / 1_000_000
 
@@ -45,10 +62,12 @@ def _macro_f1(conf: dict[str, dict[str, int]], labels) -> float:
 
 
 def _to_binary(label: str) -> str:
+    """No Fit остаётся, Potential/Good сливаются в Fit."""
     return "No Fit" if label == "No Fit" else "Fit"
 
 
 def _prf_positive(conf: dict, pos: str = "Fit") -> dict:
+    """Precision/Recall/F1 для положительного класса (бинарный режим)."""
     tp = conf[pos][pos]
     fp = sum(conf[o][pos] for o in conf if o != pos)
     fn = sum(conf[pos][o] for o in conf[pos] if o != pos)
@@ -66,6 +85,7 @@ def run(limit: int | None, use_skeptic: bool, use_judge: bool) -> dict:
     llm_client.reset_usage()
     t0 = time.perf_counter()
 
+    # авто-режим: если в gold-метках только {No Fit, Fit} — бинарная оценка
     gold_set = {item["label"] for item in data}
     BINARY = gold_set <= {"No Fit", "Fit"}
     LABELS = ("No Fit", "Fit") if BINARY else FIT_LABELS
@@ -86,7 +106,7 @@ def run(limit: int | None, use_skeptic: bool, use_judge: bool) -> dict:
         try:
             res = assess_pair(item["resume_text"], item["job_description_text"],
                               use_skeptic=use_skeptic)
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 — сетевой/парсинг сбой: НЕ считаем как предсказание
             print(f"  [{i}/{len(data)}] {item['id']}: ОШИБКА {exc}")
             n_errors += 1
             errored = True
@@ -95,6 +115,7 @@ def run(limit: int | None, use_skeptic: bool, use_judge: bool) -> dict:
                    "_ghost_obj": None, "n_steps": 0, "n_tool_calls": 0,
                    "requirements": {}, "confidence": 0.0, "skeptic": None}
         pred3 = res["final_fit"]
+        # приводим к активному пространству меток (бинарное или трёхклассовое)
         gold_l = _to_binary(gold) if BINARY else gold
         pred = (_to_binary(pred3) if pred3 else None) if BINARY else pred3
         if not errored and pred is not None:
@@ -139,7 +160,7 @@ def run(limit: int | None, use_skeptic: bool, use_judge: bool) -> dict:
     traces_f.close()
 
     n = len(data)
-    denom = scored or 1
+    denom = scored or 1  # метрики считаем по успешно обработанным парам
     usage = llm_client.get_usage()
     cost = usage["prompt_tokens"] * PRICE_IN + usage["completion_tokens"] * PRICE_OUT
     ghost_agg = aggregate_ghost(ghost_objs) if ghost_objs else {}
@@ -170,7 +191,7 @@ def run(limit: int | None, use_skeptic: bool, use_judge: bool) -> dict:
         "config": {"use_skeptic": use_skeptic, "use_judge": use_judge},
     }
     if BINARY:
-        summary["fit_metrics"] = _prf_positive(conf, "Fit")  
+        summary["fit_metrics"] = _prf_positive(conf, "Fit")  # precision/recall/F1 класса Fit
 
     (OUT / "eval_results.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,3 +1,16 @@
+"""
+Матчер: агент с инструментами + структурированный вывод.
+
+Поток:
+  1. extract_requirements() — структурно вынуть требования вакансии (JobRequirements).
+  2. run_matcher_agent() — ReAct-цикл: модель сама зовёт search_resume /
+     check_skill_present, собирая доказательства по требованиям.
+  3. финализация — из накопленного транскрипта получить FitAssessment
+     (структурированный вывод с валидаторами, max_retries).
+
+Используются и raw-клиент (tool calling), и JSON-клиент (структурный вывод) —
+оба из вашего llm_client.py (DeepSeek).
+"""
 
 from __future__ import annotations
 
@@ -9,14 +22,14 @@ from schema import FitAssessment, JobRequirements
 from tools import TOOL_SCHEMAS, make_tools
 
 REQ_SYSTEM = (
-    "Ты — рекрутер-аналитик. Извлеки из текста вакансии структурированные "
+    "Ты — рекрутёр-аналитик. Извлеки из текста вакансии структурированные "
     "требования: короткое название роли, обязательные навыки (3-10 тегов), "
     "желательные навыки, минимальный опыт в годах (0 если не указан), уровень "
     "(junior/mid/senior/lead/unknown). Навыки — короткими тегами, без воды."
 )
 
 MATCH_SYSTEM = """\
-Ты — технический рекрутер. Оцени соответствие кандидата вакансии, опираясь
+Ты — технический рекрутёр. Оцени соответствие кандидата вакансии, опираясь
 ТОЛЬКО на факты из резюме. У тебя есть инструменты:
 - search_resume(query): найти релевантные фрагменты резюме;
 - check_skill_present(skill): проверить, упомянут ли навык дословно.
@@ -74,6 +87,7 @@ def extract_requirements(job_description: str, *, temperature: float = 0.0) -> J
 
 
 def _run_react(resume_text: str, req: JobRequirements) -> tuple[str, list[dict], list[dict]]:
+    """ReAct-цикл по инструментам. Возвращает (transcript_text, tool_log, raw_trace)."""
     impl, used = make_tools(resume_text)
     client = make_raw_client()
     model = get_model()
@@ -85,6 +99,8 @@ def _run_react(resume_text: str, req: JobRequirements) -> tuple[str, list[dict],
         f"Мин. опыт: {req.min_years_experience} лет; уровень: {req.seniority.value}"
     )
 
+    # Предварительный RAG: по каждому обязательному навыку достаём фрагменты резюме,
+    # чтобы модель не объявляла навык "missing" просто потому, что сама не искала.
     pre_lines = []
     for sk in req.must_have_skills[:8]:
         r = impl["search_resume"](sk, top_k=2)
@@ -125,18 +141,27 @@ def _run_react(resume_text: str, req: JobRequirements) -> tuple[str, list[dict],
             trace.append({"call": name, "args": args, "obs": obs})
             messages.append({"role": "tool", "tool_call_id": tc.id,
                              "content": json.dumps(obs, ensure_ascii=False)[:1500]})
+    # лимит шагов — просим финальную выжимку без инструментов
     messages.append({"role": "user", "content": "Достаточно. Дай выжимку (DONE) без инструментов."})
     resp = client.chat.completions.create(model=model, messages=messages, temperature=0.0)
     return (resp.choices[0].message.content or ""), used, trace
 
 
 def compute_coverage(resume_text: str, req: JobRequirements) -> dict:
+    """Детерминированно посчитать покрытие обязательных навыков резюме.
+
+    Навык считается «найденным», если он сам ИЛИ его синоним/вариант написания
+    встречается в резюме (skills.skill_present, с нормализацией и словарём
+    синонимов) ИЛИ имеет заметный BM25-хит. Синонимы поднимают recall на
+    профильных резюме, где навык записан другими словами.
+    """
     from retrieval import build_index
     from skills import is_generic, normalize_resume, skill_present
 
     rnorm = normalize_resume(resume_text)
     idx = build_index(resume_text)
     present, absent = [], []
+    # дискриминативные навыки (без слишком общих) — по ним и считаем покрытие
     disc = [sk for sk in req.must_have_skills if not is_generic(sk)] or req.must_have_skills
     for sk in disc:
         hit = skill_present(sk, rnorm) or any(h.score >= 1.2 for h in idx.search(sk, top_k=1))
@@ -146,11 +171,14 @@ def compute_coverage(resume_text: str, req: JobRequirements) -> dict:
     return {"present": present, "absent": absent, "total": total, "ratio": round(ratio, 3)}
 
 
-GOOD_THRESHOLD = 0.45   # Good Fit
-FIT_THRESHOLD = 0.2   # Potential Fit
+# --- Пороги решения по покрытию (легко крутить под свои данные) ---
+# Граница Fit/No Fit (в бинарном режиме) = FIT_THRESHOLD.
+GOOD_THRESHOLD = 0.50   # >= -> Good Fit
+FIT_THRESHOLD = 0.30    # >= -> Potential Fit (и = граница No Fit/Fit в бинаре)
 
 
 def _coverage_label(ratio: float, has_reqs: bool) -> str:
+    """Калиброванная метка по покрытию. Пороги вынесены в константы выше."""
     if not has_reqs:
         return "Potential Fit"
     if ratio >= GOOD_THRESHOLD:
@@ -161,6 +189,7 @@ def _coverage_label(ratio: float, has_reqs: bool) -> str:
 
 
 def run_matcher_agent(resume_text: str, job_description: str) -> dict:
+    """Полный матчинг одной пары. Возвращает dict с оценкой и метриками пути."""
     req = extract_requirements(job_description)
     coverage = compute_coverage(resume_text, req)
     transcript, used, trace = _run_react(resume_text, req)

@@ -1,0 +1,53 @@
+{
+  "n": 18,
+  "mode": "binary",
+  "labels": [
+    "No Fit",
+    "Fit"
+  ],
+  "scored": 18,
+  "errors": 0,
+  "exact_accuracy": 1.0,
+  "adjacent_accuracy": 1.0,
+  "macro_f1": 1.0,
+  "confusion_matrix": {
+    "No Fit": {
+      "No Fit": 9,
+      "Fit": 0
+    },
+    "Fit": {
+      "No Fit": 0,
+      "Fit": 9
+    }
+  },
+  "judge_avg": {
+    "groundedness": 4.67,
+    "relevance": 4.83
+  },
+  "path": {
+    "avg_steps": 10.17,
+    "avg_tool_calls": 14.83,
+    "llm_calls": 125,
+    "total_tokens": 151435,
+    "approx_cost_usd": 0.0573,
+    "wall_sec": 306.6
+  },
+  "hallucination": {
+    "assessments": 18,
+    "assessments_with_any_ghost": 6,
+    "share_with_ghost": 0.333,
+    "total_evidence": 52,
+    "ghost_quotes": 17,
+    "ghost_skills": 1,
+    "ghost_quote_rate": 0.327
+  },
+  "config": {
+    "use_skeptic": true,
+    "use_judge": true
+  },
+  "fit_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  }
+}
